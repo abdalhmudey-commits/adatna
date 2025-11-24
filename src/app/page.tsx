@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect, useCallback, useContext } from 'react';
@@ -7,6 +8,7 @@ import HabitList from '@/components/habit/habit-list';
 import { useToast } from "@/hooks/use-toast";
 import { Smile } from 'lucide-react';
 import { NotificationsContext } from '@/context/notifications-context';
+import { useLanguage } from '@/context/language-context';
 
 type ManagedHabit = Habit & { intervalId?: number };
 
@@ -17,6 +19,7 @@ export default function Home() {
   const [isClient, setIsClient] = useState(false);
   const { toast } = useToast();
   const { notificationsEnabled } = useContext(NotificationsContext);
+  const { t } = useLanguage();
 
   const playAudio = (url: string) => {
     const audio = new Audio(url);
@@ -53,8 +56,8 @@ export default function Home() {
       if (reminderType === 'audio' && audioBlobUrl) {
         playAudio(audioBlobUrl);
         toast({
-            title: `حان وقت التنبيه الصوتي لـ: ${name}`,
-            description: 'يتم الآن تشغيل تنبيهك الصوتي المخصص.',
+            title: `Time for audio alert for: ${name}`,
+            description: 'Playing your custom audio alert now.',
         });
       } else {
         showNotification(name, message);
@@ -99,9 +102,9 @@ export default function Home() {
     if ('Notification' in window && Notification.permission !== "granted" && Notification.permission !== "denied") {
       Notification.requestPermission().then(permission => {
         if (permission === 'granted') {
-          toast({ title: 'تمكين الإشعارات', description: 'يمكنك الآن تلقي إشعارات التذكير.' });
+          toast({ title: 'Notifications Enabled', description: 'You can now receive reminder notifications.' });
         } else {
-          toast({ title: 'الإشعارات معطلة', description: 'لن تتمكن من تلقي تذكيرات نصية.', variant: 'destructive' });
+          toast({ title: 'Notifications Disabled', description: 'You will not be able to receive text reminders.', variant: 'destructive' });
         }
       });
     }
@@ -131,8 +134,8 @@ export default function Home() {
     const managedHabit: ManagedHabit = { ...newHabit, intervalId };
     setHabits(prevHabits => [...prevHabits, managedHabit]);
     toast({
-        title: "تم إضافة العادة بنجاح!",
-        description: `سيتم تذكيرك بشأن "${newHabit.name}".`,
+        title: t('home.habitAddedSuccess'),
+        description: t('home.habitAddedDescription', newHabit.name),
     });
   };
 
@@ -145,8 +148,8 @@ export default function Home() {
       return prevHabits.filter(h => h.id !== id);
     });
     toast({
-        title: "تم حذف العادة",
-        description: "تم إيقاف جميع التذكيرات لهذه العادة.",
+        title: t('home.habitDeletedSuccess'),
+        description: t('home.habitDeletedDescription'),
     });
   };
 
@@ -164,14 +167,14 @@ export default function Home() {
           <AddHabitForm onAddHabit={addHabit} />
         </div>
         <div className="lg:col-span-2">
-            <h2 className="text-2xl font-headline font-semibold mb-4 border-b pb-2">قائمة عاداتك</h2>
+            <h2 className="text-2xl font-headline font-semibold mb-4 border-b pb-2">{t('home.yourHabits')}</h2>
             {habits.length > 0 ? (
                 <HabitList habits={habits} onDeleteHabit={deleteHabit} />
             ) : (
                 <div className="text-center py-16 px-6 bg-card rounded-lg border-2 border-dashed">
                     <Smile className="mx-auto h-12 w-12 text-muted-foreground" />
-                    <h3 className="mt-4 text-xl font-semibold">القائمة فارغة</h3>
-                    <p className="mt-1 text-muted-foreground">لم تقم بإضافة أي عادات بعد. ابدأ بإضافة واحدة!</p>
+                    <h3 className="mt-4 text-xl font-semibold">{t('home.emptyHabitsTitle')}</h3>
+                    <p className="mt-1 text-muted-foreground">{t('home.emptyHabitsDescription')}</p>
                 </div>
             )}
         </div>

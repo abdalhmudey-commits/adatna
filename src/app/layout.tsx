@@ -9,6 +9,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import AppHeader from '@/components/layout/app-header';
 import BottomNav from '@/components/layout/bottom-nav';
 import { NotificationsProvider } from '@/context/notifications-context';
+import { LanguageProvider } from '@/context/language-context';
 import { useState, useEffect } from 'react';
 import SplashScreen from '@/components/splash-screen';
 
@@ -61,15 +62,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NotificationsProvider>
-             {loading && <SplashScreen />}
-            <div className={`relative flex min-h-screen flex-col transition-opacity duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}>
-              <AppHeader />
-              <main className="flex-1 pb-20">{children}</main>
-              <BottomNav />
-            </div>
-            <Toaster />
-          </NotificationsProvider>
+          <LanguageProvider>
+            <NotificationsProvider>
+              {loading && <SplashScreen />}
+              <div className={`relative flex min-h-screen flex-col transition-opacity duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}>
+                <AppHeader />
+                <main className="flex-1 pb-20">{children}</main>
+                <BottomNav />
+              </div>
+              <Toaster />
+            </NotificationsProvider>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

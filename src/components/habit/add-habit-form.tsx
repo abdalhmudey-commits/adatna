@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -29,6 +30,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mic, Square, Plus, Trash2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/context/language-context";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "يجب أن يكون الاسم حرفين على الأقل." }),
@@ -44,6 +46,7 @@ interface AddHabitFormProps {
 }
 
 export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
+  const { t } = useLanguage();
   const [isRecording, setIsRecording] = useState(false);
   const [audioBlobUrl, setAudioBlobUrl] = useState<string | undefined>(undefined);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
@@ -86,8 +89,8 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
       } catch (err) {
         console.error("Error accessing microphone:", err);
         toast({
-          title: "خطأ في الوصول إلى الميكروفون",
-          description: "يرجى التأكد من منح الإذن لاستخدام الميكروفون.",
+          title: t('home.micError'),
+          description: t('home.micErrorDescription'),
           variant: "destructive",
         });
       }
@@ -105,7 +108,7 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
     if (values.reminderType === 'audio' && !audioBlobUrl) {
       form.setError("reminderType", {
         type: "manual",
-        message: "يرجى تسجيل تنبيه صوتي أولاً.",
+        message: t('home.audioRecordingRequired'),
       });
       return;
     }
@@ -135,7 +138,7 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
             <Plus />
-            إضافة عادة جديدة
+            {t('home.addHabit')}
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -146,9 +149,9 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>اسم العادة</FormLabel>
+                  <FormLabel>{t('home.habitName')}</FormLabel>
                   <FormControl>
-                    <Input placeholder="مثال: قضم الأظافر" {...field} />
+                    <Input placeholder={t('home.habitNamePlaceholder')} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -160,9 +163,9 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>وصف العادة (اختياري)</FormLabel>
+                  <FormLabel>{t('home.habitDescription')}</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="صف العادة التي تريد التخلص منها" {...field} />
+                    <Textarea placeholder={t('home.habitDescriptionPlaceholder')} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -174,9 +177,9 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>رسالة التذكير</FormLabel>
+                  <FormLabel>{t('home.reminderMessage')}</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="رسالة تظهر مع الإشعار لتذكيرك" {...field} />
+                    <Textarea placeholder={t('home.reminderMessagePlaceholder')} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -184,9 +187,9 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
             />
 
             <FormItem>
-                <FormLabel>تكرار التذكير</FormLabel>
+                <FormLabel>{t('home.reminderFrequency')}</FormLabel>
                 <div className="flex items-center gap-2">
-                    <span className="text-sm">كل</span>
+                    <span className="text-sm">{t('home.every')}</span>
                     <FormField
                     control={form.control}
                     name="interval"
@@ -206,14 +209,14 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                             <SelectTrigger>
-                                <SelectValue placeholder="اختر وحدة" />
+                                <SelectValue placeholder={t('home.intervalUnit')} />
                             </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                                <SelectItem value="seconds">ثوانٍ</SelectItem>
-                                <SelectItem value="minutes">دقائق</SelectItem>
-                                <SelectItem value="hours">ساعات</SelectItem>
-                                <SelectItem value="days">أيام</SelectItem>
+                                <SelectItem value="seconds">{t('home.seconds')}</SelectItem>
+                                <SelectItem value="minutes">{t('home.minutes')}</SelectItem>
+                                <SelectItem value="hours">{t('home.hours')}</SelectItem>
+                                <SelectItem value="days">{t('home.days')}</SelectItem>
                             </SelectContent>
                         </Select>
                         </FormItem>
@@ -228,7 +231,7 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
               name="reminderType"
               render={({ field }) => (
                 <FormItem className="space-y-3">
-                  <FormLabel>نوع التذكير</FormLabel>
+                  <FormLabel>{t('home.reminderType')}</FormLabel>
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
@@ -239,13 +242,13 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
                         <FormControl>
                           <RadioGroupItem value="notification" />
                         </FormControl>
-                        <FormLabel className="font-normal">إشعار نصي</FormLabel>
+                        <FormLabel className="font-normal">{t('home.notification')}</FormLabel>
                       </FormItem>
                       <FormItem className="flex items-center space-x-3 space-y-0 rtl:space-x-reverse">
                         <FormControl>
                           <RadioGroupItem value="audio" />
                         </FormControl>
-                        <FormLabel className="font-normal">تنبيه صوتي</FormLabel>
+                        <FormLabel className="font-normal">{t('home.audio')}</FormLabel>
                       </FormItem>
                     </RadioGroup>
                   </FormControl>
@@ -256,17 +259,17 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
             
             {reminderType === 'audio' && (
                 <div className="space-y-3 p-4 border rounded-lg bg-secondary/50">
-                    <h4 className="font-medium">تسجيل صوتي مخصص</h4>
+                    <h4 className="font-medium">{t('home.recordAudio')}</h4>
                     <div className="flex items-center gap-4 flex-wrap">
                         {!isRecording ? (
                             <Button type="button" onClick={handleStartRecording} disabled={isRecording}>
                                 <Mic className="mr-2 h-4 w-4" />
-                                تسجيل
+                                {t('home.record')}
                             </Button>
                         ) : (
                             <Button type="button" variant="destructive" onClick={handleStopRecording}>
                                 <Square className="mr-2 h-4 w-4" />
-                                إيقاف
+                                {t('home.stop')}
                                 <span className="ml-2 h-2 w-2 rounded-full bg-white animate-pulse"></span>
                             </Button>
                         )}
@@ -285,7 +288,7 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
 
             <Button type="submit" className="w-full">
               <Plus className="mr-2 h-4 w-4" />
-              إضافة العادة
+              {t('home.addHabitButton')}
             </Button>
           </form>
         </Form>

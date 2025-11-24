@@ -1,3 +1,4 @@
+
 "use client";
 
 import { type Habit } from "@/lib/types";
@@ -23,6 +24,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Bell, Mic, Trash2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useLanguage } from "@/context/language-context";
 
 interface HabitItemProps {
   habit: Habit;
@@ -30,16 +32,7 @@ interface HabitItemProps {
 }
 
 export default function HabitItem({ habit, onDelete }: HabitItemProps) {
-
-  const getFrequencyText = () => {
-    const unitMap = {
-        seconds: 'ثوانٍ',
-        minutes: 'دقائق',
-        hours: 'ساعات',
-        days: 'أيام',
-    };
-    return `كل ${habit.interval} ${unitMap[habit.intervalUnit]}`;
-  }
+  const { t } = useLanguage();
 
   return (
     <Card className="transition-all hover:shadow-md">
@@ -57,15 +50,15 @@ export default function HabitItem({ habit, onDelete }: HabitItemProps) {
                 </AlertDialogTrigger>
                 <AlertDialogContent>
                     <AlertDialogHeader>
-                    <AlertDialogTitle>هل أنت متأكد؟</AlertDialogTitle>
+                    <AlertDialogTitle>{t('home.deleteConfirmTitle')}</AlertDialogTitle>
                     <AlertDialogDescription>
-                        سيتم حذف هذه العادة بشكل دائم. لا يمكن التراجع عن هذا الإجراء وسيتم إيقاف جميع الإشعارات المتعلقة بها.
+                       {t('home.deleteConfirmDescription')}
                     </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
-                    <AlertDialogCancel>إلغاء</AlertDialogCancel>
+                    <AlertDialogCancel>{t('home.cancel')}</AlertDialogCancel>
                     <AlertDialogAction onClick={() => onDelete(habit.id)} className="bg-destructive text-destructive-foreground hover:bg-destructive/90">
-                        حذف
+                        {t('home.delete')}
                     </AlertDialogAction>
                     </AlertDialogFooter>
                 </AlertDialogContent>
@@ -78,9 +71,9 @@ export default function HabitItem({ habit, onDelete }: HabitItemProps) {
       <CardFooter className="flex flex-wrap items-center gap-2">
         <Badge variant="secondary" className="flex items-center gap-2">
             {habit.reminderType === 'notification' ? <Bell className="h-3 w-3" /> : <Mic className="h-3 w-3" />}
-            <span>{habit.reminderType === 'notification' ? 'إشعار نصي' : 'تنبيه صوتي'}</span>
+            <span>{habit.reminderType === 'notification' ? t('home.notification') : t('home.audio')}</span>
         </Badge>
-        <Badge variant="outline">{getFrequencyText()}</Badge>
+        <Badge variant="outline">{t('home.getFrequencyText', habit.interval, habit.intervalUnit)}</Badge>
       </CardFooter>
     </Card>
   );
