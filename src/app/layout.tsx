@@ -57,8 +57,11 @@ export default function RootLayout({
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
          <link rel="manifest" href={`${basePath}/manifest.json`} />
-         <link rel="apple-touch-icon" href={`${basePath}/icons/icon-192x192.png`}></link>
          <meta name="theme-color" content="#18453B" />
+         <link rel="apple-touch-icon" href={`${basePath}/icons/icon-192x192.png`}></link>
+         <meta name="apple-mobile-web-app-capable" content="yes" />
+         <meta name="mobile-web-app-capable" content="yes" />
+         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
          {/* We can't export Metadata, so we manage it via a component */}
       </head>
       <body className={`${inter.className} font-body antialiased`}>
