@@ -36,13 +36,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-         <link rel="manifest" href="/adatna/manifest.webmanifest" />
+         <link rel="manifest" href={`${basePath}/manifest.webmanifest`} />
          <meta name="theme-color" content="#18453B" />
-         <link rel="apple-touch-icon" href="/adatna/icons/icon-192x192.png"></link>
+         <link rel="apple-touch-icon" href={`${basePath}/icons/icon-192x192.png`}></link>
          <meta name="apple-mobile-web-app-capable" content="yes" />
          <meta name="mobile-web-app-capable" content="yes" />
          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

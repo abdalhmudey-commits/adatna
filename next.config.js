@@ -1,14 +1,15 @@
 /** @type {import('next').NextConfig} */
 
+const isProd = process.env.NODE_ENV === 'production';
 const repo = 'adatna';
-const assetPrefix = `/${repo}/`;
-const basePath = `/${repo}`;
+const assetPrefix = isProd ? `/${repo}/` : '';
+const basePath = isProd ? `/${repo}` : '';
 
 const withPWA = require('next-pwa')({
   dest: 'public',
   register: true,
   skipWaiting: true,
-  disable: process.env.NODE_ENV === 'development',
+  disable: !isProd,
   basePath: basePath,
 });
 
@@ -20,6 +21,9 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  }
 };
 
 module.exports = withPWA(nextConfig);
