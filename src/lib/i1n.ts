@@ -1,5 +1,5 @@
 
-export type Locale = 'ar' | 'en' | 'fr' | 'tr' | 'id';
+export type Locale = 'ar' | 'en' | 'fr' | 'tr' | 'id' | 'fa';
 
 export const translations = {
   ar: {
@@ -61,6 +61,7 @@ export const translations = {
       french: 'Français',
       turkish: 'Türkçe',
       indonesian: 'Bahasa Indonesia',
+      persian: 'فارسی',
       langChangedTitle: 'تم تغيير اللغة',
       langChangedTo: (lang: string) => `تم التبديل إلى ${lang}.`,
       toggleNotifications: 'تفعيل/إلغاء تفعيل الإشعارات',
@@ -139,6 +140,7 @@ export const translations = {
       french: 'Français',
       turkish: 'Türkçe',
       indonesian: 'Bahasa Indonesia',
+      persian: 'فارسی',
       langChangedTitle: 'Language Changed',
       langChangedTo: (lang: string) => `Switched to ${lang}.`,
       toggleNotifications: 'Toggle notifications',
@@ -217,6 +219,7 @@ export const translations = {
       french: 'Français',
       turkish: 'Türkçe',
       indonesian: 'Bahasa Indonesia',
+      persian: 'فارسی',
       langChangedTitle: 'Langue modifiée',
       langChangedTo: (lang: string) => `Passage à ${lang}.`,
       toggleNotifications: 'Activer/désactiver les notifications',
@@ -295,6 +298,7 @@ export const translations = {
       french: 'Français',
       turkish: 'Türkçe',
       indonesian: 'Bahasa Indonesia',
+      persian: 'فارسی',
       langChangedTitle: 'Dil Değiştirildi',
       langChangedTo: (lang: string) => `${lang} diline geçildi.`,
       toggleNotifications: 'Bildirimleri aç/kapat',
@@ -373,6 +377,7 @@ export const translations = {
       french: 'Français',
       turkish: 'Türkçe',
       indonesian: 'Bahasa Indonesia',
+      persian: 'فارسی',
       langChangedTitle: 'Bahasa Diubah',
       langChangedTo: (lang: string) => `Beralih ke ${lang}.`,
       toggleNotifications: 'Aktifkan/nonaktifkan notifikasi',
@@ -392,6 +397,83 @@ export const translations = {
       author: 'Penulis',
     }
   },
+  fa: {
+    nav: {
+      habits: 'عادت',
+      adhkar: 'اذکار',
+      summaries: 'خلاصه ها',
+    },
+    home: {
+      addHabit: 'افزودن عادت جدید',
+      habitName: 'نام عادت',
+      habitNamePlaceholder: 'مثال: جویدن ناخن',
+      habitDescription: 'توضیحات عادت (اختیاری)',
+      habitDescriptionPlaceholder: 'عادتی را که می خواهید ترک کنید توصیف کنید',
+      reminderMessage: 'پیام یادآوری',
+      reminderMessagePlaceholder: 'پیامی برای نمایش با اعلان',
+      reminderFrequency: 'فرکانس یادآوری',
+      every: 'هر',
+      intervalUnit: 'انتخاب واحد',
+      seconds: 'ثانیه',
+      minutes: 'دقیقه',
+      hours: 'ساعت',
+      days: 'روز',
+      reminderType: 'نوع یادآوری',
+      notification: 'اعلان متنی',
+      audio: 'هشدار صوتی',
+      recordAudio: 'ضبط صدای سفارشی',
+      record: 'ضبط',
+      stop: 'توقف',
+      deleteAudio: 'حذف ضبط',
+      addHabitButton: 'افزودن عادت',
+      yourHabits: 'لیست عادات شما',
+      emptyHabitsTitle: 'لیست خالی است',
+      emptyHabitsDescription: 'هنوز هیچ عادتی اضافه نکرده اید. با افزودن یکی شروع کنید!',
+      deleteConfirmTitle: 'آیا مطمئن هستید؟',
+      deleteConfirmDescription: 'این عمل قابل بازگشت نیست. این به طور دائم عادت را حذف کرده و تمام اعلان های آن را متوقف می کند.',
+      cancel: 'لغو',
+      delete: 'حذف',
+      habitAddedSuccess: 'عادت با موفقیت اضافه شد!',
+      habitAddedDescription: (name: string) => `در مورد "${name}" به شما یادآوری خواهد شد.`,
+      habitDeletedSuccess: 'عادت حذف شد',
+      habitDeletedDescription: 'تمام یادآوری ها برای این عادت متوقف شده است.',
+      micError: 'خطای دسترسی به میکروفون',
+      micErrorDescription: 'لطفاً اطمینان حاصل کنید که اجازه استفاده از میکروفون را داده اید.',
+      audioRecordingRequired: 'لطفاً ابتدا یک هشدار صوتی ضبط کنید.',
+      getFrequencyText: (interval: number, unit: string) => `هر ${interval} ${
+        {
+          seconds: 'ثانیه',
+          minutes: 'دقیقه',
+          hours: 'ساعت',
+          days: 'روز',
+        }[unit] || unit
+      }`
+    },
+    header: {
+      toggleLanguage: 'تغییر زبان',
+      arabic: 'العربية',
+      english: 'English',
+      french: 'Français',
+      turkish: 'Türkçe',
+      indonesian: 'Bahasa Indonesia',
+      persian: 'فارسی',
+      langChangedTitle: 'زبان تغییر کرد',
+      langChangedTo: (lang: string) => `به ${lang} تغییر یافت.`,
+      toggleNotifications: 'تغییر وضعیت اعلان ها',
+      notificationsOn: 'اعلان ها فعال شدند',
+      notificationsOnDescription: 'شما برای عادات خود یادآوری دریافت خواهید کرد.',
+      notificationsOff: 'اعلان ها غیرفعال شدند',
+      notificationsOffDescription: 'شما هیچ یادآوری دریافت نخواهید کرد.',
+      toggleTheme: 'تغییر پوسته',
+    },
+    adhkar: {
+      morning: 'اذکار صبح',
+      evening: 'اذکار عصر',
+    },
+    summaries: {
+      title: 'خلاصه کتاب ها',
+      description: 'مجموعه ای از خلاصه های عمیق کتاب هایی که زندگی میلیون ها نفر را در زمینه خودسازی و عادات تغییر داده است.',
+      author: 'نویسنده',
+    }
+  },
 };
-
-    

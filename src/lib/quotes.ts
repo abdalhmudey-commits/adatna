@@ -1,5 +1,4 @@
 
-
 export const motivationalQuotes: { [key: string]: { quote: string; author: string }[] } = {
     ar: [
         { quote: "إن أعظم مجد ليس في عدم السقوط أبدًا، بل في النهوض في كل مرة نسقط فيها.", author: "نيلسون مانديلا" },
@@ -140,7 +139,6 @@ export const motivationalQuotes: { [key: string]: { quote: string; author: strin
         { quote: "Tantangan adalah apa yang membuat hidup menarik, dan mengatasinya adalah apa yang membuat hidup berarti.", author: "Joshua J. Marine" },
         { quote: "Seseorang yang tidak pernah membuat kesalahan tidak pernah mencoba sesuatu yang baru.", author: "Albert Einstein" },
         { quote: "Waktu terbaik untuk menanam pohon adalah 20 tahun yang lalu. Waktu terbaik kedua adalah sekarang.", author: "Pepatah Cina" }
-    ]
+    ],
+    fa: []
 };
-
-    

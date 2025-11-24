@@ -611,7 +611,9 @@ export const adhkar: { [key: string]: AdhkarCollection } = {
             virtue: "Dosa-dosanya akan diampuni meskipun sebanyak buih di lautan."
         }
     ]
+  },
+  fa: {
+    morning: [],
+    evening: []
   }
 };
-
-    

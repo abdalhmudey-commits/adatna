@@ -32,6 +32,7 @@ export default function AppHeader() {
       case 'fr': langName = 'Français'; break;
       case 'tr': langName = 'Türkçe'; break;
       case 'id': langName = 'Bahasa Indonesia'; break;
+      case 'fa': langName = 'فارسی'; break;
     }
     toast({
       title: t('header.langChangedTitle'),
@@ -75,6 +76,9 @@ export default function AppHeader() {
                <DropdownMenuItem onClick={() => handleLanguageChange('id')} disabled={locale === 'id'}>
                 {t('header.indonesian')}
               </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleLanguageChange('fa')} disabled={locale === 'fa'}>
+                {t('header.persian')}
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           
@@ -97,5 +101,3 @@ export default function AppHeader() {
     </header>
   );
 }
-
-    

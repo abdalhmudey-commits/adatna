@@ -281,7 +281,8 @@ const bookSummaries = {
   ],
   fr: [],
   tr: [],
-  id: []
+  id: [],
+  fa: []
 };
 
 

@@ -19,10 +19,10 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   useEffect(() => {
     setIsClient(true);
     const storedLocale = localStorage.getItem('habitual_locale') as Locale;
-    if (storedLocale && ['ar', 'en', 'fr', 'tr', 'id'].includes(storedLocale)) {
+    if (storedLocale && ['ar', 'en', 'fr', 'tr', 'id', 'fa'].includes(storedLocale)) {
       setLocaleState(storedLocale);
       document.documentElement.lang = storedLocale;
-      document.documentElement.dir = storedLocale === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.dir = ['ar', 'fa'].includes(storedLocale) ? 'rtl' : 'ltr';
     } else {
        document.documentElement.lang = 'ar';
        document.documentElement.dir = 'rtl';
@@ -34,7 +34,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       setLocaleState(newLocale);
       localStorage.setItem('habitual_locale', newLocale);
       document.documentElement.lang = newLocale;
-      document.documentElement.dir = newLocale === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.dir = ['ar', 'fa'].includes(newLocale) ? 'rtl' : 'ltr';
     }
   };
 
@@ -81,5 +81,3 @@ export const useLanguage = () => {
   }
   return context;
 };
-
-    
