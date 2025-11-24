@@ -1,8 +1,8 @@
 {
+  "id": "/adatna/",
   "name": "التخلص من العادات والافكار وملخصات كتب وتنمية الشخصية",
   "short_name": "هاكر العادات",
   "description": "تطبيق شامل لمساعدتك على التخلص من العادات السيئة، مع ملخصات كتب قيمة لتنمية شخصيتك.",
-  "id": "/adatna/",
   "start_url": "/adatna/",
   "display": "standalone",
   "orientation": "portrait-primary",
@@ -25,18 +25,16 @@
   ],
   "screenshots": [
     {
-      "src": "https://picsum.photos/seed/screenshot1/540/720",
-      "sizes": "540x720",
-      "type": "image/jpeg",
-      "form_factor": "narrow",
-      "label": "Homescreen"
+      "src": "/adatna/screenshots/screenshot1.png",
+      "sizes": "1080x2340",
+      "type": "image/png",
+      "label": "إدارة العادات"
     },
     {
-      "src": "https://picsum.photos/seed/screenshot2/540/720",
-      "sizes": "540x720",
-      "type": "image/jpeg",
-      "form_factor": "narrow",
-      "label": "Book Summaries"
+      "src": "/adatna/screenshots/screenshot2.png",
+      "sizes": "1080x2340",
+      "type": "image/png",
+      "label": "ملخصات الكتب"
     }
   ]
 }

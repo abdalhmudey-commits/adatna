@@ -32,21 +32,18 @@ import { Mic, Square, Plus, Trash2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/context/language-context";
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: "يجب أن يكون الاسم حرفين على الأقل." }),
-  description: z.string().optional(),
-  message: z.string().min(5, { message: "يجب أن تكون الرسالة 5 أحرف على الأقل." }),
-  interval: z.coerce.number().min(1, { message: "يجب أن يكون الفاصل الزمني 1 على الأقل." }),
-  intervalUnit: z.enum(['seconds', 'minutes', 'hours', 'days']),
-  reminderType: z.enum(['notification', 'audio']),
-});
-
-interface AddHabitFormProps {
-  onAddHabit: (habit: Habit) => void;
-}
-
-export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
+const AddHabitForm = ({ onAddHabit }: { onAddHabit: (habit: Habit) => void; }) => {
   const { t } = useLanguage();
+
+  const formSchema = z.object({
+    name: z.string().min(2, { message: t('home.habitName') + " قصير جداً" }),
+    description: z.string().optional(),
+    message: z.string().min(5, { message: t('home.reminderMessage') + " قصير جداً" }),
+    interval: z.coerce.number().min(1, { message: "يجب أن يكون الفاصل الزمني 1 على الأقل." }),
+    intervalUnit: z.enum(['seconds', 'minutes', 'hours', 'days']),
+    reminderType: z.enum(['notification', 'audio']),
+  });
+  
   const [isRecording, setIsRecording] = useState(false);
   const [audioBlobUrl, setAudioBlobUrl] = useState<string | undefined>(undefined);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
@@ -296,3 +293,6 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
     </Card>
   );
 }
+
+export default AddHabitForm;
+
