@@ -125,10 +125,8 @@ export default function Home() {
 
   return (
     <div className="container mx-auto p-4 md:p-8">
-      <header className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">هاكر العادات</h1>
-        <p className="text-lg text-muted-foreground mt-2">تحكم في عاداتك، تحكم في حياتك.</p>
-      </header>
+       <header className="text-center mb-6">
+       </header>
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
         <div className="lg:col-span-1">

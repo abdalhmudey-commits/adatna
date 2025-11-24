@@ -1,11 +1,11 @@
 "use client";
 
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs";
 import { Sunrise, Sunset } from "lucide-react";
 
 const morningAdhkar = [
@@ -40,7 +40,7 @@ const eveningAdhkar = [
         title: "آية الكرسي",
         content: "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ... (نفس الآية)",
         count: "مرة واحدة",
-        virtue: "من قالها حين يمسي أجير من الجن حتى يصبح."
+        virtue: "من قالها حين يمsi أجير من الجن حتى يصبح."
     },
     {
         title: "المعوذات",
@@ -62,61 +62,56 @@ const eveningAdhkar = [
     }
 ];
 
+const DhikrCard = ({ title, content, count, virtue }: { title: string, content: string, count: string, virtue: string }) => (
+  <div className="p-4 bg-card rounded-lg border">
+    <h3 className="font-bold text-lg mb-2">{title}</h3>
+    <p className="text-base leading-relaxed rtl:font-serif">{content}</p>
+    <div className="mt-3 flex flex-wrap gap-2 text-sm">
+      <span className="font-semibold py-1 px-2.5 rounded-full bg-secondary text-secondary-foreground">{count}</span>
+      <span className="text-muted-foreground py-1 px-2.5">{virtue}</span>
+    </div>
+  </div>
+);
+
 
 export default function AdhkarPage() {
   return (
     <div className="container mx-auto p-4 md:p-8">
-      <header className="text-center mb-12">
+      <header className="text-center mb-8">
         <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">الأذكار</h1>
         <p className="text-lg text-muted-foreground mt-2">حصن المسلم اليومي من أذكار الصباح والمساء</p>
       </header>
 
-      <Accordion type="multiple" defaultValue={['morning', 'evening']} className="w-full">
-        <AccordionItem value="morning">
-          <AccordionTrigger className="text-xl font-bold text-primary hover:no-underline">
-            <div className="flex items-center gap-3">
-              <Sunrise className="h-6 w-6 text-accent" />
+      <Tabs defaultValue="morning" className="w-full">
+        <TabsList className="grid w-full grid-cols-2">
+          <TabsTrigger value="morning">
+            <div className="flex items-center gap-2">
+              <Sunrise className="h-5 w-5" />
               <span>أذكار الصباح</span>
             </div>
-          </AccordionTrigger>
-          <AccordionContent>
-            <div className="space-y-4 pt-4">
-              {morningAdhkar.map((dhikr, index) => (
-                <div key={index} className="p-4 bg-card rounded-lg border">
-                  <h3 className="font-bold text-lg mb-2">{dhikr.title}</h3>
-                  <p className="text-base leading-relaxed rtl:font-serif">{dhikr.content}</p>
-                  <div className="mt-3 flex flex-wrap gap-2 text-sm">
-                    <span className="font-semibold py-1 px-2.5 rounded-full bg-secondary text-secondary-foreground">{dhikr.count}</span>
-                    <span className="text-muted-foreground py-1 px-2.5">{dhikr.virtue}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="evening">
-          <AccordionTrigger className="text-xl font-bold text-primary hover:no-underline">
-             <div className="flex items-center gap-3">
-              <Sunset className="h-6 w-6 text-accent" />
+          </TabsTrigger>
+          <TabsTrigger value="evening">
+            <div className="flex items-center gap-2">
+              <Sunset className="h-5 w-5" />
               <span>أذكار المساء</span>
             </div>
-          </AccordionTrigger>
-          <AccordionContent>
-            <div className="space-y-4 pt-4">
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="morning">
+          <div className="space-y-4 pt-4">
+            {morningAdhkar.map((dhikr, index) => (
+              <DhikrCard key={`morning-${index}`} {...dhikr} />
+            ))}
+          </div>
+        </TabsContent>
+        <TabsContent value="evening">
+           <div className="space-y-4 pt-4">
               {eveningAdhkar.map((dhikr, index) => (
-                <div key={index} className="p-4 bg-card rounded-lg border">
-                  <h3 className="font-bold text-lg mb-2">{dhikr.title}</h3>
-                  <p className="text-base leading-relaxed rtl:font-serif">{dhikr.content}</p>
-                   <div className="mt-3 flex flex-wrap gap-2 text-sm">
-                    <span className="font-semibold py-1 px-2.5 rounded-full bg-secondary text-secondary-foreground">{dhikr.count}</span>
-                    <span className="text-muted-foreground py-1 px-2.5">{dhikr.virtue}</span>
-                  </div>
-                </div>
+                 <DhikrCard key={`evening-${index}`} {...dhikr} />
               ))}
             </div>
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }
