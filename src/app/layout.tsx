@@ -52,6 +52,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
+         <link rel="manifest" href="/manifest.json" />
          {/* We can't export Metadata, so we manage it via a component */}
       </head>
       <body className={`${inter.className} font-body antialiased`}>
