@@ -140,5 +140,18 @@ export const motivationalQuotes: { [key: string]: { quote: string; author: strin
         { quote: "Seseorang yang tidak pernah membuat kesalahan tidak pernah mencoba sesuatu yang baru.", author: "Albert Einstein" },
         { quote: "Waktu terbaik untuk menanam pohon adalah 20 tahun yang lalu. Waktu terbaik kedua adalah sekarang.", author: "Pepatah Cina" }
     ],
-    fa: []
+    fa: [
+        { quote: "بزرگترین افتخار در زندگی هرگز سقوط نکردن نیست، بلکه برخاستن در هر بار سقوط است.", author: "نلسون ماندلا" },
+        { quote: "تنها راه برای انجام یک کار بزرگ، دوست داشتن کاری است که انجام می‌دهید.", author: "استیو جابز" },
+        { quote: "تغییری باش که می‌خواهی در جهان ببینی.", author: "گاندی" },
+        { quote: "موفقیت نهایی نیست، شکست کشنده نیست: این شجاعت برای ادامه دادن است که اهمیت دارد.", author: "وینستون چرچیل" },
+        { quote: "منتظر فرصت نباش. آن را بساز.", author: "جورج برنارد شاو" },
+        { quote: "ذهن همه چیز است. به هر چه فکر کنی، همان می‌شوی.", author: "بودا" },
+        { quote: "از جایی که هستی شروع کن. از چیزی که داری استفاده کن. کاری که می‌توانی را انجام بده.", author: "آرتور اش" },
+        { quote: "چالش‌ها چیزی هستند که زندگی را جالب می‌کنند و غلبه بر آنها چیزی است که به زندگی معنا می‌بخشد.", author: "جاشوا جی. مارین" },
+        { quote: "کسی که هرگز اشتباهی نکرده، هرگز چیز جدیدی را امتحان نکرده است.", author: "آلبرت انیشتین" },
+        { quote: "بهترین زمان برای کاشتن یک درخت ۲۰ سال پیش بود. دومین بهترین زمان، همین حالاست.", author: "ضرب‌المثل چینی" }
+    ]
 };
+
+    

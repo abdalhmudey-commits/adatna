@@ -279,10 +279,542 @@ const bookSummaries = {
       ]
     }
   ],
-  fr: [],
-  tr: [],
-  id: [],
-  fa: []
+  fr: [
+    {
+      id: "atomic-habits",
+      title: "Un Rien Peut Tout Changer - James Clear",
+      author: "James Clear",
+      summary: [
+        "L'idée principale de 'Un Rien Peut Tout Changer' est que de minuscules changements de comportement, appelés 'habitudes atomiques', peuvent s'accumuler pour produire des résultats remarquables. Au lieu de se concentrer sur des objectifs massifs, Clear préconise d'améliorer nos systèmes quotidiens de 1% chaque jour.",
+        "Le livre fournit un cadre pratique en quatre étapes pour créer de bonnes habitudes et briser les mauvaises : Rendez-la évidente, Rendez-la attrayante, Rendez-la facile, Rendez-la satisfaisante.",
+        "Clear explique que l'identité joue un rôle central dans le changement des habitudes. Au lieu de dire 'Je veux lire plus', vous devriez changer votre identité pour dire 'Je suis un lecteur'.",
+        "L'un des concepts les plus importants est l'empilement d'habitudes, où vous liez une nouvelle habitude à une ancienne déjà établie pour faciliter son adoption par le cerveau."
+      ]
+    },
+    {
+      id: "power-of-habit",
+      title: "Le Pouvoir des Habitudes - Charles Duhigg",
+      author: "Charles Duhigg",
+      summary: [
+        "'Le Pouvoir des Habitudes' révèle la science derrière la formation des habitudes. Le thème central est la 'Boucle de l'Habitude' : le signal, la routine et la récompense.",
+        "Le signal est le déclencheur qui met le cerveau en mode automatique. La routine est le comportement lui-même. La récompense aide le cerveau à décider si cette boucle mérite d'être mémorisée.",
+        "La règle d'or du changement d'habitude est de conserver le même signal et la même récompense, mais de ne changer que la routine.",
+        "Le livre examine des études de cas d'entreprises et d'individus pour montrer comment la compréhension de la boucle de l'habitude peut entraîner des transformations radicales."
+      ]
+    },
+    {
+      id: "7-habits",
+      title: "Les 7 Habitudes de Ceux Qui Réalisent Tout ce Qu'ils Entreprennent - Stephen Covey",
+      author: "Stephen Covey",
+      summary: [
+        "Ce livre propose une approche holistique de l'efficacité personnelle et professionnelle à travers sept habitudes fondamentales, partant du principe que l'efficacité vient de l'intérieur.",
+        "Les trois premières habitudes se concentrent sur la 'Victoire Privée' (indépendance) : (1) Soyez proactif, (2) Commencez avec la fin en tête, (3) Donnez la priorité aux priorités.",
+        "Les trois suivantes visent la 'Victoire Publique' (interdépendance) : (4) Pensez gagnant/gagnant, (5) Cherchez d'abord à comprendre, ensuite à être compris, (6) Créez des synergies.",
+        "La septième habitude, 'Aiguisez vos facultés', est celle du renouvellement continu dans les dimensions physique, spirituelle, mentale et socio-émotionnelle."
+      ]
+    },
+    {
+      id: "the-one-thing",
+      title: "The One Thing - Gary Keller & Jay Papasan",
+      author: "Gary Keller & Jay Papasan",
+      summary: [
+        "Le livre se concentre sur l'idée de se focaliser sur la 'seule chose' la plus importante à un moment donné pour obtenir des résultats extraordinaires. Le succès vient de faire la bonne chose, pas beaucoup de choses.",
+        "Il pose la 'Question de Focalisation' : 'Quelle est la SEULE chose que vous puissiez faire de telle sorte qu'en la faisant, tout le reste deviendra plus facile ou inutile ?'.",
+        "Le livre critique le multitâche comme un mythe qui réduit la productivité et préconise le 'Time Blocking' (blocage de temps) pour se concentrer pleinement sur cette 'seule chose'.",
+        "Les auteurs comparent l'effet de la 'seule chose' à la chute de dominos : en se concentrant sur la première tâche la plus importante, on déclenche une série de résultats positifs."
+      ]
+    },
+    {
+      id: "deep-work",
+      title: "Deep Work - Cal Newport",
+      author: "Cal Newport",
+      summary: [
+        "Le 'Deep Work' (Travail en profondeur) est la capacité de se concentrer sans distraction sur une tâche exigeante sur le plan cognitif. Cette compétence est de plus en plus rare et précieuse.",
+        "Le livre oppose le 'Deep Work' au 'Shallow Work' (travail superficiel), des tâches logistiques non exigeantes. Newport soutient que nous passons trop de temps sur le travail superficiel.",
+        "Il propose quatre philosophies pour intégrer le travail en profondeur : Monastique (isolement total), Bimodale (alternance), Rythmique (habitude régulière) et Journalistique (profiter des temps morts).",
+        "Newport donne des stratégies pratiques, comme 'accepter l'ennui' pour entraîner la concentration et 'quitter les réseaux sociaux' pour éviter les distractions."
+      ]
+    },
+    {
+      id: "mindset",
+      title: "Mindset - Carol S. Dweck",
+      author: "Carol S. Dweck",
+      summary: [
+        "La psychologue Carol Dweck présente deux types de mentalités : la 'mentalité fixe' et la 'mentalité de croissance'.",
+        "Ceux qui ont une 'mentalité fixe' croient que leurs qualités (intelligence, talent) sont des traits immuables. Ils évitent les défis et abandonnent facilement.",
+        "À l'inverse, ceux qui ont une 'mentalité de croissance' croient que leurs capacités peuvent être développées par le travail. Ils acceptent les défis et persévèrent.",
+        "Le livre explique comment la mentalité affecte la réussite dans tous les domaines de la vie et propose des stratégies pour cultiver une 'mentalité de croissance'."
+      ]
+    },
+    {
+      id: "subtle-art",
+      title: "L'Art Subtil de s'en Foutre - Mark Manson",
+      author: "Mark Manson",
+      summary: [
+        "Le livre adopte une approche à contre-courant de la pensée positive, affirmant que le bonheur vient du choix des problèmes qui nous tiennent vraiment à cœur.",
+        "L'idée centrale est que la vie est pleine de difficultés, et essayer d'éviter la douleur est contre-productif. Il faut accepter la souffrance comme partie intégrante de la réalisation de toute chose de valeur.",
+        "Manson préconise d'assumer l'entière responsabilité de nos vies, y compris de nos réactions aux événements. Ce qui compte, c'est la façon dont nous choisissons de les interpréter.",
+        "Le livre encourage à penser à la mort pour identifier nos vraies valeurs et cesser de perdre du temps sur des futilités."
+      ]
+    },
+    {
+      id: "monk-ferrari",
+      title: "Le Moine qui vendit sa Ferrari - Robin Sharma",
+      author: "Robin Sharma",
+      summary: [
+        "Le livre est une fable sur un avocat à succès, Julian Mantle, qui, après une crise cardiaque, vend tout pour chercher un sens plus profond à la vie dans l'Himalaya.",
+        "Julian rencontre les Sages de Sivana, qui lui enseignent sept vertus pour une vie éclairée : maîtriser son esprit, suivre son but, pratiquer le 'Kaizen' (amélioration continue), vivre avec discipline, respecter son temps, servir les autres et embrasser le présent.",
+        "L'histoire entière sert de guide spirituel et pratique pour passer de la recherche du succès matériel à la paix intérieure et à l'épanouissement.",
+        "C'est un guide pour transformer sa vie par le développement personnel et une vie pleine de sens."
+      ]
+    },
+    {
+      id: "one-hundred-years",
+      title: "Cent Ans de Solitude - Gabriel García Márquez",
+      author: "Gabriel García Márquez",
+      summary: [
+        "Ce chef-d'œuvre de la littérature mondiale suit l'histoire de la famille Buendía sur sept générations dans le village fictif de Macondo.",
+        "Le roman est un excellent exemple de 'réalisme magique', où le surnaturel se mêle harmonieusement au quotidien.",
+        "Il explore des thèmes récurrents comme la solitude, la nature cyclique du temps et le destin. Chaque membre de la famille Buendía semble condamné à la solitude.",
+        "À la fin, des parchemins anciens révèlent que l'histoire de la famille était écrite d'avance, et le roman se termine par la destruction de Macondo."
+      ]
+    },
+    {
+      id: "five-love-languages",
+      title: "Les 5 Langages de l'Amour - Gary Chapman",
+      author: "Gary Chapman",
+      summary: [
+        "Le livre introduit un concept puissant : les gens parlent différents 'langages d'amour'. Comprendre le langage de votre partenaire est la clé d'une relation saine.",
+        "Les cinq langages sont : (1) les paroles valorisantes, (2) les moments de qualité, (3) les cadeaux, (4) les services rendus, et (5) le toucher physique.",
+        "Chapman explique que chacun a un langage d'amour primaire. Exprimer l'amour dans le langage de votre partenaire remplit son 'réservoir d'amour'.",
+        "Le livre est pratique et propose des quiz pour découvrir son propre langage et celui de son partenaire, ainsi que des conseils pour 'parler' chaque langage."
+      ]
+    },
+    {
+      id: "pistachio-theory",
+      title: "La Théorie de la Pistache - Fahad Amer Al-Ahmadi",
+      author: "Fahad Amer Al-Ahmadi",
+      summary: [
+        "'La Théorie de la Pistache' est un recueil d'articles sur les modes de pensée, le développement personnel et la résolution de problèmes quotidiens.",
+        "Le nom du livre s'inspire de l'idée que pour chaque action, il y a une réaction égale et opposée. La solution n'est pas la force brute, mais de trouver la 'fissure' (le point faible).",
+        "Le livre contient de nombreuses petites 'théories' pour changer sa façon de penser, comme la théorie de 'la carte est plus grande que le territoire' ou la 'loi de la concentration'.",
+        "Ce n'est pas un récit, mais une collection d'outils mentaux et de conseils rapides sur des sujets variés comme la gestion du temps, la prise de décision et la confiance en soi."
+      ]
+    },
+    {
+      id: "rich-dad-poor-dad",
+      title: "Père Riche, Père Pauvre - Robert T. Kiyosaki",
+      author: "Robert T. Kiyosaki",
+      summary: [
+        "Le livre présente l'éducation financière à travers l'histoire de l'auteur avec son 'père pauvre' (son père biologique, un fonctionnaire) et son 'père riche' (le père de son ami, un entrepreneur).",
+        "L'idée centrale est la différence de mentalité face à l'argent. Le 'père pauvre' croit au chemin traditionnel (étudier, trouver un emploi sûr). Le 'père riche' enseigne que les riches font travailler l'argent pour eux.",
+        "Le livre souligne l'importance de distinguer les 'actifs' (qui rapportent de l'argent) des 'passifs' (qui en coûtent). Il conseille de construire un portefeuille d'actifs.",
+        "Kiyosaki critique le système éducatif pour son manque d'éducation financière et encourage les lecteurs à s'éduquer eux-mêmes pour atteindre la liberté financière."
+      ]
+    }
+  ],
+  tr: [
+    {
+      id: "atomic-habits",
+      title: "Atomik Alışkanlıklar - James Clear",
+      author: "James Clear",
+      summary: [
+        "'Atomik Alışkanlıklar' kitabının ana fikri, 'atomik alışkanlıklar' olarak adlandırılan küçük davranış değişikliklerinin zamanla birikerek dikkat çekici sonuçlar doğurabileceğidir. Clear, büyük hedeflere odaklanmak yerine, günlük sistemlerimizi her gün %1 oranında iyileştirmeye odaklanmamızı savunur.",
+        "Kitap, iyi alışkanlıklar oluşturmak ve kötü alışkanlıklardan kurtulmak için dört adımlı pratik bir çerçeve sunar: Görünür Kıl, Cazip Kıl, Kolay Kıl ve Tatmin Edici Kıl.",
+        "Clear, kimliğin alışkanlıkları değiştirmede merkezi bir rol oynadığını açıklar. 'Daha fazla okumak istiyorum' demek yerine, kimliğinizi 'Ben bir okuyucuyum' diyecek şekilde değiştirmelisiniz.",
+        "Kitaptaki en önemli kavramlardan biri, yeni bir alışkanlığı zaten yerleşmiş eski bir alışkanlığa bağladığınız 'alışkanlık istifleme'dir. Bu, beynin yeni davranışı benimsemesini kolaylaştırır."
+      ]
+    },
+    {
+      id: "power-of-habit",
+      title: "Alışkanlıkların Gücü - Charles Duhigg",
+      author: "Charles Duhigg",
+      summary: [
+        "'Alışkanlıkların Gücü', alışkanlıkların nasıl oluştuğunun arkasındaki bilimi ortaya koyuyor. Kitabın ana teması 'Alışkanlık Döngüsü'dür: İşaret, Rutin ve Ödül.",
+        "İşaret, beyni otomatik moda geçiren tetikleyicidir. Rutin, davranışın kendisidir. Ödül, beynin bu döngünün hatırlanmaya değer olup olmadığına karar vermesine yardımcı olur.",
+        "Alışkanlık değiştirmenin altın kuralı, aynı işareti ve ödülü korurken sadece rutini değiştirmektir.",
+        "Kitap, alışkanlık döngüsünü anlamanın kişisel ve kurumsal düzeyde nasıl radikal dönüşümlere yol açabileceğini göstermek için şirketlerden ve bireylerden vaka çalışmaları inceliyor."
+      ]
+    },
+    {
+      id: "7-habits",
+      title: "Etkili İnsanların 7 Alışkanlığı - Stephen Covey",
+      author: "Stephen Covey",
+      summary: [
+        "Bu kitap, yedi temel alışkanlığı benimseyerek kişisel ve profesyonel etkinliğe ulaşmak için bütünsel bir yaklaşım sunar ve etkinliğin içeriden dışarıya doğru geldiğini savunur.",
+        "İlk üç alışkanlık 'Kişisel Zafer'e (bağımsızlık) odaklanır: (1) Proaktif Ol, (2) Sonunu Düşünerek İşe Başla, (3) Öncelikli İşleri İlk Sıraya Koy.",
+        "Sonraki üç alışkanlık 'Genel Zafer'e (karşılıklı bağımlılık) odaklanır: (4) Kazan/Kazan Diye Düşün, (5) Önce Anlamaya Çalış, Sonra Anlaşılmaya, (6) Sinerji Yarat.",
+        "Yedinci alışkanlık olan 'Baltayı Bile', fiziksel, ruhsal, zihinsel ve sosyal/duygusal boyutlarda sürekli yenilenme alışkanlığıdır."
+      ]
+    },
+    {
+      id: "the-one-thing",
+      title: "Tek Şey - Gary Keller & Jay Papasan",
+      author: "Gary Keller & Jay Papasan",
+      summary: [
+        "Kitap, olağanüstü sonuçlar elde etmek için herhangi bir anda en önemli olan 'tek şeye' odaklanma fikri etrafında döner. Başarı, birçok şeyi iyi yapmaktan değil, doğru şeyi mükemmel yapmaktan gelir.",
+        "Kitap 'Odaklanma Sorusu'nu sorar: 'Yapabileceğiniz ve yaparak diğer her şeyi daha kolay veya gereksiz kılacak TEK Şey nedir?'.",
+        "Kitap, üretkenliği azaltan bir efsane olarak çoklu görevi eleştirir ve bu 'tek şeye' tam konsantrasyonla çalışmak için 'Zaman Bloklama'yı savunur.",
+        "Yazarlar, 'tek şeyin' etkisini devrilen domino taşlarına benzetir: en önemli göreve odaklanarak, bir dizi olumlu sonucu tetiklersiniz."
+      ]
+    },
+    {
+      id: "deep-work",
+      title: "Derin Çalışma - Cal Newport",
+      author: "Cal Newport",
+      summary: [
+        "'Derin Çalışma', dikkat dağılmadan bilişsel olarak zorlu bir göreve odaklanma yeteneği olarak tanımlanır. Bu beceri giderek daha nadir ve değerli hale gelmektedir.",
+        "Kitap, 'Derin Çalışma'yı, dikkat dağıtıcı unsurlar varken yapılabilen, bilişsel olarak talepkar olmayan 'Yüzeysel Çalışma'dan ayırır. Newport, çok fazla zamanı yüzeysel işlerde harcadığımızı savunur.",
+        "Derin çalışmayı hayata geçirmek için dört felsefe önerir: Manastır (tam izolasyon), Bimodal (dönüşümlü), Ritmik (düzenli alışkanlık) ve Gazetecilik (boş zamanları değerlendirme).",
+        "Newport, dikkat dağınıklığına direnme, sosyal medyayı bırakma gibi derin çalışma yeteneğini artırmak için pratik stratejiler sunar."
+      ]
+    },
+    {
+      id: "mindset",
+      title: "Zihniyet - Carol S. Dweck",
+      author: "Carol S. Dweck",
+      summary: [
+        "Psikolog Carol Dweck iki temel zihniyet kavramını tanıtır: 'Sabit Zihniyet' ve 'Gelişim Zihniyeti'.",
+        "'Sabit Zihniyet'e sahip insanlar, zeka veya yetenek gibi temel niteliklerinin değişmez özellikler olduğuna inanırlar. Bu yüzden zorluklardan kaçınır ve kolayca pes ederler.",
+        "Buna karşılık, 'Gelişim Zihniyeti'ne sahip insanlar, yeteneklerinin sıkı çalışma ile geliştirilebileceğine inanırlar. Zorlukları benimser ve sebat ederler.",
+        "Kitap, zihniyetin hayattaki başarıyı nasıl önemli ölçüde etkilediğini açıklar ve kendimizde ve başkalarında 'Gelişim Zihniyeti' geliştirmek için stratejiler sunar."
+      ]
+    },
+    {
+      id: "subtle-art",
+      title: "Ustalık Gerektiren Kafaya Takmama Sanatı - Mark Manson",
+      author: "Mark Manson",
+      summary: [
+        "Kitap, pozitif düşünce kültürüne karşı sezgisel bir yaklaşım sunarak, mutluluğun sorunlardan kaçınmaktan değil, gerçekten önem verdiğimiz sorunları seçmekten geldiğini savunur.",
+        "Ana fikir, hayatın zorluklarla dolu olduğu ve acıdan kaçınmaya çalışmanın verimsiz olduğudur. Enerjimizi gerçekten önemli olan şeylere odaklamalı ve acının değerli bir şeyi başarmanın ayrılmaz bir parçası olduğunu kabul etmeliyiz.",
+        "Manson, tepkilerimiz de dahil olmak üzere hayatlarımızın tüm sorumluluğunu üstlenmeyi savunur. Önemli olan başımıza ne geldiği değil, onu nasıl yorumlamayı ve ele almayı seçtiğimizdir.",
+        "Kitap, gerçek değerlerimizi belirlemek ve önemsiz konulara zaman harcamayı bırakmak için ölüm hakkında düşünmeyi teşvik eder."
+      ]
+    },
+    {
+      id: "monk-ferrari",
+      title: "Ferrarisini Satan Bilge - Robin Sharma",
+      author: "Robin Sharma",
+      summary: [
+        "Kitap, stresli yaşam tarzı nedeniyle kalp krizi geçiren başarılı bir avukat olan Julian Mantle hakkında bir masaldır. Daha sonra her şeyini satıp hayatın daha derin bir anlamını aramak için Himalayalar'a gider.",
+        "Julian, ona aydınlanmış bir yaşam için yedi erdemi öğreten Sivana Bilgeleri ile tanışır: zihne hakim olmak, amacını takip etmek, 'Kaizen' (sürekli gelişim) uygulamak, disiplinle yaşamak, zamana saygı duymak, başkalarına hizmet etmek ve anı kucaklamak.",
+        "Tüm hikaye, maddi başarı arayışından iç huzura ve kendini geliştirme yoluyla tatmine geçiş için ruhsal ve pratik bir rehber görevi görür.",
+        "Bu, kendini geliştirme ve anlamlı bir yaşam yoluyla hayatı dönüştürmek için bir rehberdir."
+      ]
+    },
+    {
+      id: "one-hundred-years",
+      title: "Yüzyıllık Yalnızlık - Gabriel García Márquez",
+      author: "Gabriel García Márquez",
+      summary: [
+        "Bu dünya edebiyatı başyapıtı, kurgusal Macondo köyünde Buendía ailesinin yedi kuşak boyunca tarihini takip eder.",
+        "Roman, doğaüstü olayların günlük gerçeklikle kusursuz bir şekilde harmanlandığı 'büyülü gerçekçilik' tarzının en iyi örneklerinden biridir.",
+        "Yalnızlık, zamanın döngüsel doğası ve kader gibi tekrar eden temaları araştırır. Buendía ailesinin her üyesi bir şekilde yalnızlığa mahkum görünmektedir.",
+        "Sonunda, ailenin tüm tarihini içeren eski parşömenler deşifre edilir ve roman, izole dünyalarının sonunu simgeleyen Macondo'nun yok edilmesiyle sona erer."
+      ]
+    },
+    {
+      id: "five-love-languages",
+      title: "Beş Sevgi Dili - Gary Chapman",
+      author: "Gary Chapman",
+      summary: [
+        "Kitap güçlü bir kavram sunar: İnsanlar farklı 'sevgi dilleri' konuşur. Eşinizin dilini anlamak sağlıklı bir ilişkinin anahtarıdır.",
+        "Beş sevgi dili şunlardır: (1) Onay Sözleri, (2) Kaliteli Zaman, (3) Hediye Alma, (4) Hizmet Davranışları ve (5) Fiziksel Temas.",
+        "Chapman, herkesin birincil bir sevgi dili olduğunu açıklar. Sevgiyi eşinizin dilinde ifade etmek onun 'sevgi deposunu' doldurur.",
+        "Kitap pratiktir ve kendi ve eşinizin sevgi dilini keşfetmek için testler ve her dili etkili bir şekilde 'konuşmak' için ipuçları sunar."
+      ]
+    },
+    {
+      id: "pistachio-theory",
+      title: "Fıstık Teorisi - Fahad Amer Al-Ahmadi",
+      author: "Fahad Amer Al-Ahmadi",
+      summary: [
+        "'Fıstık Teorisi', düşünme biçimleri, kendini geliştirme ve günlük sorunları çözmeye odaklanan bir makale koleksiyonudur.",
+        "Kitabın adı, her etkinin eşit ve zıt bir tepkisi olduğu fikrinden esinlenmiştir. Çözüm kaba kuvvet değil, 'çatlağı' (zayıf noktayı) bulmaktır.",
+        "Kitap, 'harita bölgeden daha büyüktür' teorisi veya 'odaklanma yasası' gibi düşünce tarzını değiştirmeyi amaçlayan birçok küçük 'teori' içerir.",
+        "Bu bir anlatı değil, zaman yönetimi, karar verme ve özgüven gibi çeşitli konularda zihinsel araçlar ve hızlı ipuçları koleksiyonudur."
+      ]
+    },
+    {
+      id: "rich-dad-poor-dad",
+      title: "Zengin Baba Yoksul Baba - Robert T. Kiyosaki",
+      author: "Robert T. Kiyosaki",
+      summary: [
+        "Kitap, yazarın 'yoksul babası' (biyolojik babası, bir memur) ve 'zengin babası' (arkadaşının babası, bir girişimci) ile olan hikayesi aracılığıyla finansal okuryazarlığı sunar.",
+        "Ana fikir, paraya karşı zihniyet farkıdır. 'Yoksul baba' geleneksel yola inanır (çok çalış, güvenli bir iş bul). 'Zengin baba', zenginlerin para için çalışmadığını, parayı kendileri için çalıştırdığını öğretir.",
+        "Kitap, 'varlıklar' (para getiren) ve 'yükümlülükler' (para götüren) arasındaki ayrımın önemini vurgular. Varlık portföyü oluşturmayı tavsiye eder.",
+        "Kiyosaki, finansal okuryazarlık öğretmediği için eğitim sistemini eleştirir ve okuyucuları finansal özgürlüğe ulaşmak için kendilerini eğitmeye teşvik eder."
+      ]
+    }
+  ],
+  id: [
+    {
+      id: "atomic-habits",
+      title: "Atomic Habits - James Clear",
+      author: "James Clear",
+      summary: [
+        "Ide inti dari 'Atomic Habits' adalah bahwa perubahan kecil dalam perilaku, yang disebut 'kebiasaan atomik', dapat menumpuk dari waktu ke waktu untuk menghasilkan hasil yang luar biasa. Alih-alih berfokus pada tujuan besar, Clear menganjurkan untuk fokus meningkatkan sistem harian kita sebesar 1% setiap hari.",
+        "Buku ini menyediakan kerangka kerja empat langkah praktis untuk membangun kebiasaan baik dan menghentikan kebiasaan buruk: Jadikan Jelas, Jadikan Menarik, Jadikan Mudah, dan Jadikan Memuaskan.",
+        "Clear menjelaskan bahwa identitas memainkan peran penting dalam mengubah kebiasaan. Alih-alih mengatakan 'Saya ingin lebih banyak membaca', Anda harus mengubah identitas Anda menjadi 'Saya adalah seorang pembaca'.",
+        "Salah satu konsep terpenting adalah 'penumpukan kebiasaan', di mana Anda menautkan kebiasaan baru ke kebiasaan lama yang sudah mapan untuk memudahkan otak mengadopsinya."
+      ]
+    },
+    {
+      id: "power-of-habit",
+      title: "The Power of Habit - Charles Duhigg",
+      author: "Charles Duhigg",
+      summary: [
+        "'The Power of Habit' mengungkap ilmu di balik bagaimana kebiasaan terbentuk. Tema sentralnya adalah 'Lingkaran Kebiasaan': Isyarat, Rutinitas, dan Ganjaran.",
+        "Isyarat adalah pemicu yang memberitahu otak untuk masuk ke mode otomatis. Rutinitas adalah perilakunya itu sendiri. Ganjaran membantu otak memutuskan apakah lingkaran ini layak diingat.",
+        "Aturan emas perubahan kebiasaan adalah mempertahankan isyarat dan ganjaran yang sama, tetapi hanya mengubah rutinitasnya.",
+        "Buku ini meninjau studi kasus dari perusahaan dan individu untuk menunjukkan bagaimana memahami lingkaran kebiasaan dapat menghasilkan transformasi radikal."
+      ]
+    },
+    {
+      id: "7-habits",
+      title: "7 Habits of Highly Effective People - Stephen Covey",
+      author: "Stephen Covey",
+      summary: [
+        "Buku ini memberikan pendekatan holistik untuk mencapai efektivitas pribadi dan profesional melalui tujuh kebiasaan inti, dengan alasan bahwa efektivitas sejati datang dari dalam ke luar.",
+        "Tiga kebiasaan pertama berfokus pada 'Kemenangan Pribadi' (kemandirian): (1) Jadilah Proaktif, (2) Mulailah dengan Tujuan Akhir, (3) Dahulukan yang Utama.",
+        "Tiga kebiasaan berikutnya berfokus pada 'Kemenangan Publik' (saling ketergantungan): (4) Berpikir Menang/Menang, (5) Berusaha Memahami Terlebih Dahulu, Baru Dipahami, (6) Bersinergi.",
+        "Kebiasaan ketujuh, 'Asah Gergaji', adalah kebiasaan pembaruan berkelanjutan dalam dimensi fisik, spiritual, mental, dan sosial/emosional."
+      ]
+    },
+    {
+      id: "the-one-thing",
+      title: "The One Thing - Gary Keller & Jay Papasan",
+      author: "Gary Keller & Jay Papasan",
+      summary: [
+        "Buku ini berkisar pada gagasan untuk fokus secara ketat pada 'satu hal' yang paling penting pada waktu tertentu untuk mencapai hasil yang luar biasa. Kesuksesan datang dari melakukan hal yang benar dengan sangat baik, bukan banyak hal.",
+        "Buku ini mengajukan 'Pertanyaan Fokus': 'Apa SATU Hal yang bisa Anda lakukan sehingga dengan melakukannya, semua hal lain akan menjadi lebih mudah atau tidak perlu?'.",
+        "Buku ini sangat mengkritik multitasking sebagai mitos yang mengurangi produktivitas dan menyerukan 'Blok Waktu' untuk bekerja dengan konsentrasi penuh pada 'satu hal' itu.",
+        "Para penulis membandingkan efek 'satu hal' dengan jatuhnya kartu domino: dengan berfokus pada tugas terpenting, Anda memicu serangkaian hasil positif."
+      ]
+    },
+    {
+      id: "deep-work",
+      title: "Deep Work - Cal Newport",
+      author: "Cal Newport",
+      summary: [
+        "'Deep Work' (Kerja Mendalam) didefinisikan sebagai kemampuan untuk fokus tanpa gangguan pada tugas yang menuntut secara kognitif. Keterampilan ini menjadi semakin langka dan berharga.",
+        "Buku ini membedakan 'Kerja Mendalam' dari 'Kerja Dangkal', yaitu tugas-tugas logistik yang tidak menuntut secara kognitif. Newport berpendapat kita menghabiskan terlalu banyak waktu untuk pekerjaan dangkal.",
+        "Dia menyarankan empat filosofi untuk menerapkan kerja mendalam: Monastik (isolasi total), Bimodal (bergantian), Ritmis (kebiasaan teratur), dan Jurnalistik (memanfaatkan waktu luang).",
+        "Newport memberikan strategi praktis untuk meningkatkan kemampuan kerja mendalam, seperti 'merangkul kebosanan' untuk melatih konsentrasi dan 'berhenti dari media sosial'."
+      ]
+    },
+    {
+      id: "mindset",
+      title: "Mindset - Carol S. Dweck",
+      author: "Carol S. Dweck",
+      summary: [
+        "Psikolog Carol Dweck memperkenalkan dua konsep dasar mindset: 'Mindset Tetap' dan 'Mindset Tumbuh'.",
+        "Orang dengan 'Mindset Tetap' percaya bahwa kualitas dasar mereka (kecerdasan, bakat) adalah sifat yang tidak dapat diubah. Mereka menghindari tantangan dan mudah menyerah.",
+        "Sebaliknya, orang dengan 'Mindset Tumbuh' percaya bahwa kemampuan mereka dapat dikembangkan melalui kerja keras. Mereka menerima tantangan dan tekun.",
+        "Buku ini menjelaskan bagaimana mindset secara signifikan mempengaruhi pencapaian dalam semua bidang kehidupan dan menawarkan strategi untuk menumbuhkan 'Mindset Tumbuh'."
+      ]
+    },
+    {
+      id: "subtle-art",
+      title: "Sebuah Seni untuk Bersikap Bodo Amat - Mark Manson",
+      author: "Mark Manson",
+      summary: [
+        "Buku ini menawarkan pendekatan yang berlawanan dengan budaya berpikir positif, dengan alasan bahwa kebahagiaan datang dari memilih masalah mana yang benar-benar kita pedulikan.",
+        "Ide intinya adalah bahwa hidup ini penuh dengan kesulitan, dan mencoba menghindari rasa sakit adalah kontraproduktif. Kita harus menerima penderitaan sebagai bagian tak terpisahkan dari pencapaian sesuatu yang berharga.",
+        "Manson menganjurkan untuk bertanggung jawab penuh atas hidup kita, termasuk reaksi kita. Yang penting bukanlah apa yang terjadi pada kita, tetapi bagaimana kita memilih untuk menafsirkannya.",
+        "Buku ini mendorong pemikiran tentang kematian untuk mengidentifikasi nilai-nilai sejati kita dan berhenti membuang-buang waktu untuk hal-hal sepele."
+      ]
+    },
+    {
+      id: "monk-ferrari",
+      title: "The Monk Who Sold His Ferrari - Robin Sharma",
+      author: "Robin Sharma",
+      summary: [
+        "Buku ini adalah fabel tentang seorang pengacara sukses, Julian Mantle, yang setelah serangan jantung, menjual segalanya untuk mencari makna hidup yang lebih dalam di Himalaya.",
+        "Julian bertemu dengan Orang Bijak Sivana, yang mengajarinya tujuh kebajikan untuk kehidupan yang tercerahkan: menguasai pikiran, mengikuti tujuan, berlatih 'Kaizen' (perbaikan berkelanjutan), hidup dengan disiplin, menghargai waktu, melayani orang lain, dan merangkul saat ini.",
+        "Seluruh cerita berfungsi sebagai panduan spiritual dan praktis untuk beralih dari mengejar kesuksesan materi ke kedamaian batin dan kepuasan.",
+        "Ini adalah panduan untuk mengubah hidup seseorang melalui pengembangan diri dan kehidupan yang bermakna."
+      ]
+    },
+    {
+      id: "one-hundred-years",
+      title: "Seratus Tahun Kesunyian - Gabriel García Márquez",
+      author: "Gabriel García Márquez",
+      summary: [
+        "Mahakarya sastra dunia ini mengikuti sejarah keluarga Buendía selama tujuh generasi di desa fiksi Macondo.",
+        "Novel ini adalah contoh utama dari gaya 'realisme magis', di mana hal-hal supernatural berpadu mulus dengan realitas sehari-hari.",
+        "Novel ini mengeksplorasi tema-tema yang berulang seperti kesunyian, sifat siklus waktu, dan takdir. Setiap anggota keluarga Buendía tampaknya ditakdirkan untuk kesunyian.",
+        "Pada akhirnya, perkamen kuno yang berisi sejarah keluarga terungkap, dan novel berakhir dengan kehancuran Macondo, yang melambangkan akhir dari dunia mereka yang terisolasi."
+      ]
+    },
+    {
+      id: "five-love-languages",
+      title: "Lima Bahasa Kasih - Gary Chapman",
+      author: "Gary Chapman",
+      summary: [
+        "Buku ini memperkenalkan konsep yang kuat: Orang berbicara 'bahasa kasih' yang berbeda. Memahami bahasa pasangan Anda adalah kunci hubungan yang sehat.",
+        "Lima bahasa kasih tersebut adalah: (1) Kata-kata Peneguhan, (2) Waktu Berkualitas, (3) Menerima Hadiah, (4) Tindakan Pelayanan, dan (5) Sentuhan Fisik.",
+        "Chapman menjelaskan bahwa setiap orang memiliki bahasa kasih utama. Mengekspresikan cinta dalam bahasa pasangan Anda akan mengisi 'tangki cintanya'.",
+        "Buku ini praktis dan menawarkan kuis untuk menemukan bahasa kasih Anda dan pasangan, serta tips untuk 'berbicara' setiap bahasa secara efektif."
+      ]
+    },
+    {
+      id: "pistachio-theory",
+      title: "Teori Pistachio - Fahad Amer Al-Ahmadi",
+      author: "Fahad Amer Al-Ahmadi",
+      summary: [
+        "'Teori Pistachio' adalah kumpulan artikel yang berfokus pada cara berpikir, pengembangan diri, dan pemecahan masalah sehari-hari.",
+        "Nama buku ini terinspirasi oleh gagasan bahwa setiap aksi memiliki reaksi yang sama dan berlawanan. Solusinya bukan kekuatan kasar, tetapi menemukan 'celah' (titik lemah).",
+        "Buku ini berisi banyak 'teori' kecil untuk mengubah cara berpikir seseorang, seperti teori 'peta lebih besar dari wilayah' atau 'hukum fokus'.",
+        "Ini bukanlah narasi, melainkan kumpulan alat mental dan tips cepat tentang berbagai topik seperti manajemen waktu, pengambilan keputusan, dan kepercayaan diri."
+      ]
+    },
+    {
+      id: "rich-dad-poor-dad",
+      title: "Rich Dad Poor Dad - Robert T. Kiyosaki",
+      author: "Robert T. Kiyosaki",
+      summary: [
+        "Buku ini menyajikan literasi keuangan melalui kisah penulis dengan 'ayah miskin' (ayah kandungnya, seorang pegawai negeri) dan 'ayah kaya' (ayah temannya, seorang pengusaha).",
+        "Ide sentralnya adalah perbedaan pola pikir terhadap uang. 'Ayah miskin' percaya pada jalur tradisional (belajar giat, dapatkan pekerjaan aman). 'Ayah kaya' mengajarkan bahwa orang kaya membuat uang bekerja untuk mereka.",
+        "Buku ini menekankan pentingnya membedakan antara 'aset' (yang menghasilkan uang) dan 'liabilitas' (yang menghabiskan uang). Buku ini menyarankan untuk membangun portofolio aset.",
+        "Kiyosaki mengkritik sistem pendidikan karena tidak mengajarkan literasi keuangan dan mendorong pembaca untuk mendidik diri sendiri untuk mencapai kebebasan finansial."
+      ]
+    }
+  ],
+  fa: [
+    {
+      id: "atomic-habits",
+      title: "عادت‌های اتمی - جیمز کلیر",
+      author: "جیمز کلیر",
+      summary: [
+        "ایده اصلی کتاب «عادت‌های اتمی» این است که تغییرات کوچک در رفتار، که «عادت‌های اتمی» نامیده می‌شوند، می‌توانند در طول زمان نتایج قابل توجهی به همراه داشته باشند. کلیر به جای تمرکز بر اهداف بزرگ، بر بهبود روزانه ۱٪ سیستم‌های زندگی ما تأکید می‌کند.",
+        "این کتاب یک چارچوب عملی چهار مرحله‌ای برای ساختن عادت‌های خوب و شکستن عادت‌های بد ارائه می‌دهد: آن را آشکار کنید، آن را جذاب کنید، آن را آسان کنید و آن را رضایت‌بخش کنید.",
+        "کلیر توضیح می‌دهد که هویت نقش محوری در تغییر عادت‌ها دارد. به جای گفتن «می‌خواهم بیشتر بخوانم»، باید هویت خود را به «من یک خواننده هستم» تغییر دهید.",
+        "یکی از مهم‌ترین مفاهیم، «انباشت عادت» است، که در آن یک عادت جدید را به یک عادت قدیمی تثبیت‌شده پیوند می‌دهید تا پذیرش آن برای مغز آسان‌تر شود."
+      ]
+    },
+    {
+      id: "power-of-habit",
+      title: "قدرت عادت - چارلز داهیگ",
+      author: "چارلز داهیگ",
+      summary: [
+        "«قدرت عادت» علم پشت چگونگی شکل‌گیری عادت‌ها را آشکار می‌کند. موضوع اصلی کتاب «حلقه عادت» است: نشانه، روتین و پاداش.",
+        "نشانه، ماشه‌ای است که مغز را به حالت خودکار می‌برد. روتین، خود رفتار است. پاداش به مغز کمک می‌کند تا تصمیم بگیرد که آیا این حلقه ارزش به خاطر سپردن را دارد یا خیر.",
+        "قانون طلایی تغییر عادت، حفظ همان نشانه و پاداش است، در حالی که فقط روتین تغییر می‌کند.",
+        "این کتاب مطالعات موردی از شرکت‌ها و افراد را بررسی می‌کند تا نشان دهد که چگونه درک حلقه عادت می‌تواند منجر به تحولات اساسی شود."
+      ]
+    },
+    {
+      id: "7-habits",
+      title: "هفت عادت مردمان مؤثر - استفان کاوی",
+      author: "استفان کاوی",
+      summary: [
+        "این کتاب یک رویکرد جامع برای دستیابی به اثربخشی شخصی و حرفه‌ای از طریق هفت عادت اصلی ارائه می‌دهد و استدلال می‌کند که اثربخشی واقعی از درون به بیرون است.",
+        "سه عادت اول بر «پیروزی شخصی» (استقلال) تمرکز دارند: (۱) عامل باشید، (۲) از پایان در ذهن شروع کنید، (۳) اولین کارها را اول انجام دهید.",
+        "سه عادت بعدی بر «پیروزی عمومی» (وابستگی متقابل) تمرکز دارند: (۴) برنده/برنده فکر کنید، (۵) ابتدا در پی فهمیدن باشید، سپس فهمیده شدن، (۶) سینرژی ایجاد کنید.",
+        "عادت هفتم، «اره را تیز کنید»، عادت تجدید مداوم در ابعاد فیزیکی، معنوی، ذهنی و اجتماعی/عاطفی است."
+      ]
+    },
+    {
+      id: "the-one-thing",
+      title: "تنها یک چیز - گری کلر و جی پاپاسان",
+      author: "گری کلر و جی پاپاسان",
+      summary: [
+        "این کتاب حول ایده تمرکز دقیق بر «تنها یک چیز» که در هر زمان مهم‌ترین است برای دستیابی به نتایج فوق‌العاده می‌چرخد. موفقیت از انجام عالی کار درست حاصل می‌شود، نه انجام خوب کارهای زیاد.",
+        "این کتاب «سوال تمرکز» را مطرح می‌کند: «آن یک چیزی که با انجام دادنش، همه چیز دیگر آسان‌تر یا غیرضروری می‌شود چیست؟».",
+        "این کتاب به شدت از چندوظیفگی به عنوان یک افسانه که بهره‌وری را کاهش می‌دهد انتقاد می‌کند و به جای آن «بلوک‌بندی زمانی» را برای کار با تمرکز کامل بر روی «تنها یک چیز» پیشنهاد می‌کند.",
+        "نویسندگان تأثیر «تنها یک چیز» را به افتادن دومینوها تشبیه می‌کنند: با تمرکز بر مهم‌ترین کار، مجموعه‌ای از نتایج مثبت را به راه می‌اندازید."
+      ]
+    },
+    {
+      id: "deep-work",
+      title: "کار عمیق - کال نیوپورت",
+      author: "کال نیوپورت",
+      summary: [
+        "«کار عمیق» به عنوان توانایی تمرکز بدون حواس‌پرتی بر روی یک کار دشوار از نظر شناختی تعریف می‌شود. این مهارت به طور فزاینده‌ای نادر و ارزشمند می‌شود.",
+        "این کتاب «کار عمیق» را از «کار سطحی»، یعنی کارهای لجستیکی که از نظر شناختی سخت نیستند، متمایز می‌کند. نیوپورت استدلال می‌کند که ما زمان زیادی را صرف کارهای سطحی می‌کنیم.",
+        "او چهار فلسفه را برای به کارگیری کار عمیق پیشنهاد می‌کند: رهبانی (انزوای کامل)، دو حالته (متناوب)، ریتمیک (عادت منظم) و روزنامه‌نگاری (استفاده از اوقات فراغت).",
+        "نیوپورت استراتژی‌های عملی برای افزایش توانایی کار عمیق ارائه می‌دهد، مانند «پذیرش کسالت» برای تمرین تمرکز و «ترک رسانه‌های اجتماعی»."
+      ]
+    },
+    {
+      id: "mindset",
+      title: "طرز فکر - کارول دوک",
+      author: "کارول دوک",
+      summary: [
+        "کارول دوک، روانشناس، دو مفهوم اساسی طرز فکر را معرفی می‌کند: «طرز فکر ثابت» و «طرز فکر رشد».",
+        "افراد با «طرز فکر ثابت» معتقدند که ویژگی‌های اساسی آنها (هوش، استعداد) صفاتی غیرقابل تغییر هستند. آنها از چالش‌ها اجتناب می‌کنند و به راحتی تسلیم می‌شوند.",
+        "در مقابل، افراد با «طرز فکر رشد» معتقدند که توانایی‌هایشان را می‌توان با کار سخت توسعه داد. آنها چالش‌ها را می‌پذیرند و پشتکار دارند.",
+        "این کتاب توضیح می‌دهد که چگونه طرز فکر به طور قابل توجهی بر موفقیت در تمام زمینه‌های زندگی تأثیر می‌گذارد و استراتژی‌هایی برای پرورش «طرز فکر رشد» ارائه می‌دهد."
+      ]
+    },
+    {
+      id: "subtle-art",
+      title: "هنر ظریف بی‌خیالی - مارک منسن",
+      author: "مارک منسن",
+      summary: [
+        "این کتاب رویکردی برخلاف فرهنگ تفکر مثبت ارائه می‌دهد و استدلال می‌کند که خوشبختی از انتخاب مشکلاتی که واقعاً برایمان اهمیت دارند ناشی می‌شود.",
+        "ایده اصلی این است که زندگی پر از مشکلات است و تلاش برای اجتناب از درد، بی‌فایده است. ما باید رنج را به عنوان بخشی جدایی‌ناپذیر از دستیابی به هر چیز ارزشمندی بپذیریم.",
+        "منسن از پذیرفتن مسئولیت کامل زندگی‌مان، از جمله واکنش‌هایمان، حمایت می‌کند. مهم نیست چه اتفاقی برای ما می‌افتد، بلکه نحوه تفسیر ما مهم است.",
+        "این کتاب تفکر درباره مرگ را برای شناسایی ارزش‌های واقعی ما و توقف اتلاف وقت برای مسائل پیش پا افتاده تشویق می‌کند."
+      ]
+    },
+    {
+      id: "monk-ferrari",
+      title: "راهبی که فراری‌اش را فروخت - رابین شارما",
+      author: "رابین شارما",
+      summary: [
+        "این کتاب حکایتی است درباره یک وکیل موفق به نام جولیان منتل که پس از یک حمله قلبی، همه چیز را می‌فروشد تا معنای عمیق‌تری برای زندگی در هیمالیا بیابد.",
+        "جولیان با حکیمان سیوانا ملاقات می‌کند که به او هفت فضیلت برای یک زندگی روشن‌فکرانه می‌آموزند: تسلط بر ذهن، پیروی از هدف، تمرین «کایزن» (بهبود مستمر)، زندگی با انضباط، احترام به زمان، خدمت به دیگران و پذیرش زمان حال.",
+        "کل داستان به عنوان یک راهنمای معنوی و عملی برای تغییر از تعقیب موفقیت مادی به سوی آرامش درونی و رضایت عمل می‌کند.",
+        "این راهنمایی برای تغییر زندگی از طریق خودسازی و یک زندگی هدفمند است."
+      ]
+    },
+    {
+      id: "one-hundred-years",
+      title: "صد سال تنهایی - گابریل گارسیا مارکز",
+      author: "گابریل گارسیا مارکز",
+      summary: [
+        "این شاهکار ادبیات جهان، تاریخ خانواده بوئندیا را در طول هفت نسل در دهکده خیالی ماکوندو دنبال می‌کند.",
+        "این رمان نمونه بارز سبک «رئالیسم جادویی» است، که در آن فراطبیعی با واقعیت روزمره به طور یکپارچه ترکیب می‌شود.",
+        "این رمان به بررسی مضامین تکراری مانند تنهایی، ماهیت چرخه‌ای زمان و سرنوشت می‌پردازد. به نظر می‌رسد هر یک از اعضای خانواده بوئندیا به نوعی به تنهایی محکوم شده‌اند.",
+        "در پایان، طومارهای باستانی حاوی تاریخ خانواده فاش می‌شود و رمان با نابودی ماکوندو به پایان می‌رسد که نماد پایان دنیای منزوی آنهاست."
+      ]
+    },
+    {
+      id: "five-love-languages",
+      title: "پنج زبان عشق - گری چپمن",
+      author: "گری چپمن",
+      summary: [
+        "این کتاب یک مفهوم قدرتمند را معرفی می‌کند: مردم به «زبان‌های عشق» متفاوتی صحبت می‌کنند. درک زبان شریک زندگی‌تان کلید یک رابطه سالم است.",
+        "پنج زبان عشق عبارتند از: (۱) کلام تأییدآمیز، (۲) وقت گذاشتن برای یکدیگر، (۳) دریافت هدایا، (۴) خدمت به یکدیگر و (۵) تماس فیزیکی.",
+        "چپمن توضیح می‌دهد که هر کس یک زبان عشق اصلی دارد. ابراز عشق به زبان شریک زندگی‌تان «مخزن عشق» او را پر می‌کند.",
+        "این کتاب کاربردی است و آزمون‌هایی برای کشف زبان عشق خود و شریک زندگی‌تان و همچنین نکاتی برای «صحبت کردن» مؤثر به هر زبان ارائه می‌دهد."
+      ]
+    },
+    {
+      id: "pistachio-theory",
+      title: "نظریه پسته - فهد عامر الاحمدی",
+      author: "فهد عامر الاحمدی",
+      summary: [
+        "«نظریه پسته» مجموعه‌ای از مقالات با تمرکز بر روش‌های تفکر، خودسازی و حل مشکلات روزمره است.",
+        "نام کتاب از این ایده الهام گرفته شده است که هر عملی عکس‌العملی برابر و مخالف دارد. راه حل، نیروی بی‌رحمانه نیست، بلکه یافتن «ترک» (نقطه ضعف) است.",
+        "این کتاب شامل بسیاری از «نظریه‌های» کوچک برای تغییر طرز فکر فرد است، مانند نظریه «نقشه بزرگتر از قلمرو است» یا «قانون تمرکز».",
+        "این یک روایت نیست، بلکه مجموعه‌ای از ابزارهای ذهنی و نکات سریع در مورد موضوعات مختلف مانند مدیریت زمان، تصمیم‌گیری و اعتماد به نفس است."
+      ]
+    },
+    {
+      id: "rich-dad-poor-dad",
+      title: "پدر پولدار، پدر بی‌پول - رابرت کیوساکی",
+      author: "رابرت کیوساکی",
+      summary: [
+        "این کتاب سواد مالی را از طریق داستان نویسنده با «پدر بی‌پول» (پدر بیولوژیکی‌اش، یک کارمند دولتی) و «پدر پولدار» (پدر دوستش، یک کارآفرین) ارائه می‌دهد.",
+        "ایده اصلی تفاوت در طرز فکر نسبت به پول است. «پدر بی‌پول» به مسیر سنتی اعتقاد دارد (سخت درس بخوان، یک شغل امن پیدا کن). «پدر پولدار» می‌آموزد که ثروتمندان برای پول کار نمی‌کنند، بلکه کاری می‌کنند که پول برای آنها کار کند.",
+        "این کتاب بر اهمیت تمایز بین «دارایی‌ها» (که پول وارد می‌کنند) و «بدهی‌ها» (که پول خارج می‌کنند) تأکید می‌کند. این کتاب ساخت یک سبد دارایی را توصیه می‌کند.",
+        "کیوساکی از سیستم آموزشی به دلیل عدم آموزش سواد مالی انتقاد می‌کند و خوانندگان را تشویق می‌کند تا برای رسیدن به آزادی مالی خود را آموزش دهند."
+      ]
+    }
+  ]
 };
 
 
@@ -326,3 +858,5 @@ export default function SummariesPage() {
     </div>
   );
 }
+
+    
