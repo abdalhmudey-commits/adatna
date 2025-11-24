@@ -15,8 +15,6 @@ import SplashScreen from '@/components/splash-screen';
 
 const inter = Inter({ subsets: ['latin']});
 
-// Since we are using 'use client', we can't export Metadata directly.
-// This is a workaround to still have metadata in the page.
 const AppMetadata: React.FC = () => {
   useEffect(() => {
     document.title = 'هاكر العادات';
@@ -52,13 +50,12 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-         <link rel="manifest" href="/manifest.json" />
+         <link rel="manifest" href="/adatna/manifest.json" />
          <meta name="theme-color" content="#18453B" />
-         <link rel="apple-touch-icon" href="/icons/icon-192x192.png"></link>
+         <link rel="apple-touch-icon" href="/adatna/icons/icon-192x192.png"></link>
          <meta name="apple-mobile-web-app-capable" content="yes" />
          <meta name="mobile-web-app-capable" content="yes" />
          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-         {/* We can't export Metadata, so we manage it via a component */}
       </head>
       <body className={`${inter.className} font-body antialiased`}>
         <AppMetadata />

@@ -1,4 +1,4 @@
-name: Build Next.js App
+name: Build and Deploy Next.js App
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -26,12 +26,13 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Create .nojekyll file
+        run: touch ./out/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
