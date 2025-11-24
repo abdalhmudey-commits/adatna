@@ -1,40 +1,26 @@
 {
-  "theme_color": "#18453B",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "scope": "/adatna/",
-  "start_url": "/adatna/",
-  "id": "/adatna/",
   "name": "التخلص من العادات والافكار وملخصات كتب وتنمية الشخصية",
   "short_name": "هاكر العادات",
   "description": "تطبيق شامل لمساعدتك على التخلص من العادات السيئة، مع ملخصات كتب قيمة لتنمية شخصيتك.",
+  "start_url": ".",
+  "display": "standalone",
   "orientation": "portrait-primary",
+  "background_color": "#18453B",
+  "theme_color": "#18453B",
+  "scope": "/",
+  "id": "/",
   "icons": [
     {
-      "src": "/adatna/icons/icon-192x192.png",
+      "src": "icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/adatna/icons/icon-512x512.png",
+      "src": "icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/adatna/screenshots/screenshot1.png",
-      "sizes": "1080x2340",
-      "type": "image/png",
-      "form_factor": "narrow"
-    },
-    {
-      "src": "/adatna/screenshots/screenshot2.png",
-      "sizes": "1080x2340",
-      "type": "image/png",
-      "form_factor": "narrow"
     }
   ]
 }
