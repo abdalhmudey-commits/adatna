@@ -1,7 +1,7 @@
 {
-  "name": "Habit Hacker | هاكر العادات",
+  "name": "Habit Hacker",
   "short_name": "Habit Hacker",
-  "description": "An app to help you track and break bad habits.",
+  "description": "تطبيق لمساعدتك على التخلص من العادات السيئة",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
