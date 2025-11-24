@@ -10,7 +10,6 @@ const withPWA = require('next-pwa')({
   register: true,
   skipWaiting: true,
   disable: !isProd,
-  basePath: basePath,
 });
 
 const nextConfig = {

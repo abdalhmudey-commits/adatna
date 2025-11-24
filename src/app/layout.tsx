@@ -30,13 +30,13 @@ const AppMetadata: React.FC = () => {
   return null;
 };
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
