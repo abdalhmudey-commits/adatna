@@ -1,0 +1,96 @@
+{
+    "morning": [
+      {
+        "title": "Ayat al-Kursi",
+        "content": "Allahu la ilaha illa Huwa, Al-Hayyul-Qayyum...",
+        "count": "Une fois",
+        "virtue": "Quiconque le dit le matin sera protégé des djinns jusqu'au soir."
+      },
+      {
+        "title": "Al-Mu'awwidhat",
+        "content": "Qul Huwallahu Ahad... / Qul a'udhu bi Rabbil-falaq... / Qul a'udhu bi Rabbin-nas...",
+        "count": "Trois fois",
+        "virtue": "Quiconque les dit trois fois le matin et le soir, elles lui suffiront contre tout."
+      },
+      {
+        "title": "Prière du Matin",
+        "content": "Asbahna wa asbahal-mulku lillah...",
+        "count": "Une fois",
+        "virtue": "Une des prières authentiques du matin."
+      },
+      {
+        "title": "Sayyid al-Istighfar",
+        "content": "Allahumma Anta Rabbi la ilaha illa Anta...",
+        "count": "Une fois",
+        "virtue": "Quiconque le dit avec certitude le matin et meurt ce jour-là entrera au Paradis."
+      },
+      {
+        "title": "Glorification et Louange",
+        "content": "Subhanallahi wa bihamdihi: 'adada khalqihi, wa rida nafsihi, wa zinata 'arshihi, wa midada kalimatihi.",
+        "count": "Trois fois",
+        "virtue": "Cela a une grande vertu et une récompense multipliée."
+      },
+      {
+        "title": "Satisfaction",
+        "content": "Raditu billahi Rabban, wa bil-Islami dinan, wa bi Muhammadin... Nabiyyan.",
+        "count": "Trois fois",
+        "virtue": "Allah se fera un devoir de le satisfaire au Jour de la Résurrection."
+      },
+      {
+        "title": "Confiance en Allah",
+        "content": "Bismillahil-ladhi la yadurru ma'asmihi shay'un fil-ardi wa la fis-sama'i...",
+        "count": "Trois fois",
+        "virtue": "Rien ne lui nuira de la part d'Allah."
+      },
+      {
+        "title": "Subhanallahi wa bihamdihi",
+        "content": "Subhanallahi wa bihamdihi.",
+        "count": "Cent fois",
+        "virtue": "Ses péchés seront pardonnés même s'ils sont comme l'écume de la mer."
+      },
+      {
+        "title": "La ilaha illallah wahdahu...",
+        "content": "La ilaha illallah wahdahu la sharika lah, lahul-mulku wa lahul-hamd...",
+        "count": "Cent fois",
+        "virtue": "Il aura une récompense équivalente à celle de libérer dix esclaves, cent bonnes actions lui seront écrites, cent mauvaises actions lui seront effacées, et il aura une protection contre Satan pour ce jour jusqu'au soir."
+      }
+    ],
+    "evening": [
+      {
+        "title": "Ayat al-Kursi",
+        "content": "Allahu la ilaha illa Huwa, Al-Hayyul-Qayyum...",
+        "count": "Une fois",
+        "virtue": "Quiconque le dit le soir sera protégé des djinns jusqu'au matin."
+      },
+      {
+        "title": "Al-Mu'awwidhat",
+        "content": "Qul Huwallahu Ahad... / Qul a'udhu bi Rabbil-falaq... / Qul a'udhu bi Rabbin-nas...",
+        "count": "Trois fois",
+        "virtue": "Quiconque les dit trois fois le matin et le soir, elles lui suffiront contre tout."
+      },
+      {
+        "title": "Prière du Soir",
+        "content": "Amsayna wa amsal-mulku lillah...",
+        "count": "Une fois",
+        "virtue": "Une des prières authentiques du soir."
+      },
+      {
+        "title": "Sayyid al-Istighfar",
+        "content": "Allahumma Anta Rabbi la ilaha illa Anta...",
+        "count": "Une fois",
+        "virtue": "Quiconque le dit avec certitude le soir et meurt cette nuit-là entrera au Paradis."
+      },
+      {
+        "title": "Protection",
+        "content": "A'udhu bikalimatillahit-tammati min sharri ma khalaq.",
+        "count": "Trois fois",
+        "virtue": "Rien ne lui nuira."
+      },
+      {
+        "title": "Subhanallahi wa bihamdihi",
+        "content": "Subhanallahi wa bihamdihi.",
+        "count": "Cent fois",
+        "virtue": "Ses péchés seront pardonnés même s'ils sont comme l'écume de la mer."
+      }
+    ]
+  }

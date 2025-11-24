@@ -1,6 +1,7 @@
 
 "use client";
 
+import { useState, useEffect } from 'react';
 import {
   Tabs,
   TabsContent,
@@ -9,10 +10,21 @@ import {
 } from "@/components/ui/tabs";
 import { Sunrise, Sunset } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
-import { adhkar } from "@/lib/adhkar";
+import { Skeleton } from '@/components/ui/skeleton';
 
+type Dhikr = {
+  title: string;
+  content: string;
+  count: string;
+  virtue: string;
+};
 
-const DhikrCard = ({ title, content, count, virtue }: { title: string, content: string, count: string, virtue: string }) => (
+type AdhkarCollection = {
+  morning: Dhikr[];
+  evening: Dhikr[];
+};
+
+const DhikrCard = ({ title, content, count, virtue }: Dhikr) => (
   <div className="p-4 bg-card rounded-lg border">
     <h3 className="font-bold text-lg mb-2 text-right">{title}</h3>
     <p className="text-base leading-relaxed rtl:font-serif text-right">{content}</p>
@@ -23,10 +35,60 @@ const DhikrCard = ({ title, content, count, virtue }: { title: string, content: 
   </div>
 );
 
+const AdhkarSkeleton = () => (
+    <div className="space-y-4 pt-4">
+        {[...Array(5)].map((_, i) => (
+            <div className="p-4 bg-card rounded-lg border" key={i}>
+                <Skeleton className="h-6 w-1/2 mb-3" />
+                <Skeleton className="h-4 w-full mb-1" />
+                <Skeleton className="h-4 w-full mb-1" />
+                <Skeleton className="h-4 w-3/4 mb-3" />
+                <div className="flex gap-2">
+                    <Skeleton className="h-7 w-20 rounded-full" />
+                    <Skeleton className="h-7 w-48 rounded-full" />
+                </div>
+            </div>
+        ))}
+    </div>
+);
+
 
 export default function AdhkarPage() {
   const { locale, t } = useLanguage();
-  const currentAdhkar = adhkar[locale] || adhkar.en;
+  const [adhkar, setAdhkar] = useState<AdhkarCollection | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchAdhkar = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch(`/data/adhkar/${locale}.json`);
+        if (!response.ok) {
+            // Fallback to English if the locale-specific file is not found
+            const fallbackResponse = await fetch(`/data/adhkar/en.json`);
+            const data = await fallbackResponse.json();
+            setAdhkar(data);
+        } else {
+            const data = await response.json();
+            setAdhkar(data);
+        }
+      } catch (error) {
+        console.error("Failed to load adhkar data, falling back to English", error);
+        // Fallback to English on any error
+        try {
+            const fallbackResponse = await fetch(`/data/adhkar/en.json`);
+            const data = await fallbackResponse.json();
+            setAdhkar(data);
+        } catch (fallbackError) {
+            console.error("Failed to load English fallback adhkar data", fallbackError);
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAdhkar();
+  }, [locale]);
 
   return (
     <div className="container mx-auto p-4 md:p-8">
@@ -46,18 +108,22 @@ export default function AdhkarPage() {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="morning">
-          <div className="space-y-4 pt-4">
-            {currentAdhkar.morning.map((dhikr, index) => (
-              <DhikrCard key={`morning-${index}`} {...dhikr} />
-            ))}
-          </div>
-        </TabsContent>
-        <TabsContent value="evening">
-           <div className="space-y-4 pt-4">
-              {currentAdhkar.evening.map((dhikr, index) => (
-                 <DhikrCard key={`evening-${index}`} {...dhikr} />
+          {loading || !adhkar ? <AdhkarSkeleton/> : (
+            <div className="space-y-4 pt-4">
+              {adhkar.morning.map((dhikr, index) => (
+                <DhikrCard key={`morning-${index}`} {...dhikr} />
               ))}
             </div>
+          )}
+        </TabsContent>
+        <TabsContent value="evening">
+           {loading || !adhkar ? <AdhkarSkeleton/> : (
+             <div className="space-y-4 pt-4">
+                {adhkar.evening.map((dhikr, index) => (
+                   <DhikrCard key={`evening-${index}`} {...dhikr} />
+                ))}
+              </div>
+           )}
         </TabsContent>
       </Tabs>
     </div>

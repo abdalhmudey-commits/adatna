@@ -1,0 +1,96 @@
+{
+    "morning": [
+      {
+        "title": "Ayat Kursi",
+        "content": "Allahu la ilaha illa Huwa, Al-Hayyul-Qayyum...",
+        "count": "Sekali",
+        "virtue": "Barangsiapa membacanya di pagi hari akan dilindungi dari jin hingga sore hari."
+      },
+      {
+        "title": "Al-Mu'awwidhat",
+        "content": "Qul Huwallahu Ahad... / Qul a'udhu bi Rabbil-falaq... / Qul a'udhu bi Rabbin-nas...",
+        "count": "Tiga kali",
+        "virtue": "Barangsiapa membacanya tiga kali di pagi dan sore hari, maka itu akan mencukupinya dari segala sesuatu."
+      },
+      {
+        "title": "Doa Pagi",
+        "content": "Asbahna wa asbahal-mulku lillah, wal-hamdulillah...",
+        "count": "Sekali",
+        "virtue": "Salah satu doa pagi yang otentik."
+      },
+      {
+        "title": "Sayyidul Istighfar",
+        "content": "Allahumma Anta Rabbi la ilaha illa Anta...",
+        "count": "Sekali",
+        "virtue": "Barangsiapa membacanya dengan yakin di pagi hari dan meninggal pada hari itu, maka ia akan masuk surga."
+      },
+      {
+        "title": "Tasbih dan Tahmid",
+        "content": "Subhanallahi wa bihamdihi: 'adada khalqihi, wa rida nafsihi, wa zinata 'arshihi, wa midada kalimatihi.",
+        "count": "Tiga kali",
+        "virtue": "Memiliki keutamaan besar dan pahala yang berlipat ganda."
+      },
+      {
+        "title": "Doa Keridhaan",
+        "content": "Raditu billahi Rabban, wa bil-Islami dinan, wa bi Muhammadin... Nabiyyan.",
+        "count": "Tiga kali",
+        "virtue": "Allah akan meridhoinya pada Hari Kiamat."
+      },
+      {
+        "title": "Tawakal kepada Allah",
+        "content": "Bismillahil-ladhi la yadurru ma'asmihi shay'un fil-ardi wa la fis-sama'i...",
+        "count": "Tiga kali",
+        "virtue": "Tidak ada sesuatu pun yang akan membahayakannya dari Allah."
+      },
+      {
+        "title": "Subhanallahi wa bihamdihi",
+        "content": "Subhanallahi wa bihamdihi.",
+        "count": "Seratus kali",
+        "virtue": "Dosa-dosanya akan diampuni meskipun sebanyak buih di lautan."
+      },
+      {
+        "title": "La ilaha illallah wahdahu...",
+        "content": "La ilaha illallah wahdahu la syarika lah, lahul-mulku wa lahul-hamd...",
+        "count": "Seratus kali",
+        "virtue": "Pahalanya setara dengan memerdekakan sepuluh budak, seratus kebaikan akan ditulis untuknya, seratus keburukan akan dihapus darinya, dan dia akan mendapat perlindungan dari setan pada hari itu hingga sore."
+      }
+    ],
+    "evening": [
+      {
+        "title": "Ayat Kursi",
+        "content": "Allahu la ilaha illa Huwa, Al-Hayyul-Qayyum...",
+        "count": "Sekali",
+        "virtue": "Barangsiapa membacanya di sore hari akan dilindungi dari jin hingga pagi hari."
+      },
+      {
+        "title": "Al-Mu'awwidhat",
+        "content": "Qul Huwallahu Ahad... / Qul a'udhu bi Rabbil-falaq... / Qul a'udhu bi Rabbin-nas...",
+        "count": "Tiga kali",
+        "virtue": "Barangsiapa membacanya tiga kali di pagi dan sore hari, maka itu akan mencukupinya dari segala sesuatu."
+      },
+      {
+        "title": "Doa Sore",
+        "content": "Amsayna wa amsal-mulku lillah, wal-hamdulillah...",
+        "count": "Sekali",
+        "virtue": "Salah satu doa sore yang otentik."
+      },
+      {
+        "title": "Sayyidul Istighfar",
+        "content": "Allahumma Anta Rabbi la ilaha illa Anta...",
+        "count": "Sekali",
+        "virtue": "Barangsiapa membacanya dengan yakin di sore hari dan meninggal pada malam itu, maka ia akan masuk surga."
+      },
+      {
+        "title": "Doa Perlindungan",
+        "content": "A'udhu bikalimatillahit-tammati min syarri ma khalaq.",
+        "count": "Tiga kali",
+        "virtue": "Tidak ada sesuatu pun yang akan membahayakannya."
+      },
+      {
+        "title": "Subhanallahi wa bihamdihi",
+        "content": "Subhanallahi wa bihamdihi.",
+        "count": "Seratus kali",
+        "virtue": "Dosa-dosanya akan diampuni meskipun sebanyak buih di lautan."
+      }
+    ]
+  }

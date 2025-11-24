@@ -1,0 +1,96 @@
+{
+    "morning": [
+      {
+        "title": "Ayet-el Kürsi",
+        "content": "Allahu la ilahe illa Huvel-Hayyul-Kayyum...",
+        "count": "Bir defa",
+        "virtue": "Kim sabahleyin okursa akşama kadar cinlerden korunur."
+      },
+      {
+        "title": "Muavvizat",
+        "content": "Kul Hüvallahü Ehad... / Kul e'ûzü bi-Rabbi'l-felak... / Kul e'ûzü bi-Rabbi'n-nâs...",
+        "count": "Üç defa",
+        "virtue": "Kim sabah ve akşam üç defa okursa her şeye karşı ona yeter."
+      },
+      {
+        "title": "Sabah Duası",
+        "content": "Asbahna ve asbahal-mülkü lillah, vel-hamdülillah...",
+        "count": "Bir defa",
+        "virtue": "Sahih sabah dualarından biridir."
+      },
+      {
+        "title": "Seyyid-ül İstiğfar",
+        "content": "Allahümme Ente Rabbî la ilahe illa Ente...",
+        "count": "Bir defa",
+        "virtue": "Kim sabahleyin inanarak okur ve o gün ölürse Cennet'e girer."
+      },
+      {
+        "title": "Tesbih ve Hamd",
+        "content": "Sübhanallahi ve bihamdihi: 'adede halkıhi, ve rızâ nefsihi, ve zinete 'arşihi, ve midâde kelimâtih.",
+        "count": "Üç defa",
+        "virtue": "Büyük bir fazileti ve kat kat sevabı vardır."
+      },
+      {
+        "title": "Rıza Duası",
+        "content": "Radîtü billahi Rabben, ve bil-İslami dînen, ve bi Muhammedin... Nebiyyen.",
+        "count": "Üç defa",
+        "virtue": "Kıyamet Günü Allah'ın onu razı etmesi üzerine bir hak olur."
+      },
+      {
+        "title": "Allah'a Tevekkül",
+        "content": "Bismillahil-lezi la yedurru me'asmihi şey'ün fil-ardı ve la fis-semâi...",
+        "count": "Üç defa",
+        "virtue": "Allah'tan ona hiçbir şey zarar vermez."
+      },
+      {
+        "title": "Sübhanallahi ve bihamdihi",
+        "content": "Sübhanallahi ve bihamdihi.",
+        "count": "Yüz defa",
+        "virtue": "Deniz köpüğü kadar günahı olsa bile affedilir."
+      },
+      {
+        "title": "La ilahe illallah vahdehu...",
+        "content": "La ilahe illallah vahdehu la şerike leh, lehül-mülkü ve lehül-hamdü...",
+        "count": "Yüz defa",
+        "virtue": "On köle azat etmiş gibi sevap kazanır, yüz hasene yazılır, yüz günahı silinir ve o gün akşama kadar şeytandan korunur."
+      }
+    ],
+    "evening": [
+      {
+        "title": "Ayet-el Kürsi",
+        "content": "Allahu la ilahe illa Huvel-Hayyul-Kayyum...",
+        "count": "Bir defa",
+        "virtue": "Kim akşam okursa sabaha kadar cinlerden korunur."
+      },
+      {
+        "title": "Muavvizat",
+        "content": "Kul Hüvallahü Ehad... / Kul e'ûzü bi-Rabbi'l-felak... / Kul e'ûzü bi-Rabbi'n-nâs...",
+        "count": "Üç defa",
+        "virtue": "Kim sabah ve akşam üç defa okursa her şeye karşı ona yeter."
+      },
+      {
+        "title": "Akşam Duası",
+        "content": "Emseynâ ve emsel-mülkü lillâh, vel-hamdülillâh...",
+        "count": "Bir defa",
+        "virtue": "Sahih akşam dualarından biridir."
+      },
+      {
+        "title": "Seyyid-ül İstiğfar",
+        "content": "Allahümme Ente Rabbî la ilahe illa Ente...",
+        "count": "Bir defa",
+        "virtue": "Kim akşamleyin inanarak okur ve o gece ölürse Cennet'e girer."
+      },
+      {
+        "title": "Korunma Duası",
+        "content": "E'ûzü bi-kelimâtillâhi't-tâmmâti min şerri mâ halak.",
+        "count": "Üç defa",
+        "virtue": "Ona hiçbir şey zarar vermez."
+      },
+      {
+        "title": "Sübhanallahi ve bihamdihi",
+        "content": "Sübhanallahi ve bihamdihi.",
+        "count": "Yüz defa",
+        "virtue": "Deniz köpüğü kadar günahı olsa bile affedilir."
+      }
+    ]
+  }
