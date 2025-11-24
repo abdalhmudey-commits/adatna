@@ -10,8 +10,7 @@ import AppHeader from '@/components/layout/app-header';
 import BottomNav from '@/components/layout/bottom-nav';
 import { NotificationsProvider } from '@/context/notifications-context';
 import { LanguageProvider } from '@/context/language-context';
-import { useState, useEffect } from 'react';
-import SplashScreen from '@/components/splash-screen';
+import { useEffect } from 'react';
 
 const inter = Inter({ subsets: ['latin']});
 
@@ -37,22 +36,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate app loading
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000); // Set splash screen duration to 3 seconds
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-         <link rel="manifest" href="/manifest.json" />
+         <link rel="manifest" href="/adatna/manifest.json" />
          <meta name="theme-color" content="#18453B" />
-         <link rel="apple-touch-icon" href="/icons/icon-192x192.png"></link>
+         <link rel="apple-touch-icon" href="/adatna/icons/icon-192x192.png"></link>
          <meta name="apple-mobile-web-app-capable" content="yes" />
          <meta name="mobile-web-app-capable" content="yes" />
          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -67,8 +57,7 @@ export default function RootLayout({
         >
           <LanguageProvider>
             <NotificationsProvider>
-              {loading && <SplashScreen />}
-              <div className={`relative flex min-h-screen flex-col transition-opacity duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}>
+              <div className="relative flex min-h-screen flex-col">
                 <AppHeader />
                 <main className="flex-1 pb-20">{children}</main>
                 <BottomNav />
