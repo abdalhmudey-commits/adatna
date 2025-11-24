@@ -4,7 +4,7 @@ export type ReminderType = 'notification' | 'audio';
 export interface Habit {
   id: string;
   name: string;
-  description: string;
+  description?: string;
   message: string;
   interval: number;
   intervalUnit: IntervalUnit;

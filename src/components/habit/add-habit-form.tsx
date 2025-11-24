@@ -73,7 +73,7 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
           audioChunksRef.current.push(event.data);
         };
         mediaRecorderRef.current.onstop = () => {
-          const audioBlob = new Blob(audioChunksRef.current.flat(), { type: 'audio/webm' });
+          const audioBlob = new Blob(audioChunksRef.current, { type: mediaRecorderRef.current?.mimeType });
           const url = URL.createObjectURL(audioBlob);
           setAudioBlobUrl(url);
           audioChunksRef.current = [];
@@ -214,7 +214,7 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
                                 <SelectItem value="minutes">دقائق</SelectItem>
                                 <SelectItem value="hours">ساعات</SelectItem>
                                 <SelectItem value="days">أيام</SelectItem>
-                            </Select_content>
+                            </SelectContent>
                         </Select>
                         </FormItem>
                     )}
@@ -260,14 +260,14 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
                     <div className="flex items-center gap-4 flex-wrap">
                         {!isRecording ? (
                             <Button type="button" onClick={handleStartRecording} disabled={isRecording}>
-                                <Mic className="ml-2 h-4 w-4" />
+                                <Mic className="mr-2 h-4 w-4" />
                                 تسجيل
                             </Button>
                         ) : (
                             <Button type="button" variant="destructive" onClick={handleStopRecording}>
-                                <Square className="ml-2 h-4 w-4" />
+                                <Square className="mr-2 h-4 w-4" />
                                 إيقاف
-                                <span className="mr-2 h-2 w-2 rounded-full bg-white animate-pulse"></span>
+                                <span className="ml-2 h-2 w-2 rounded-full bg-white animate-pulse"></span>
                             </Button>
                         )}
                         {audioBlobUrl && (
@@ -284,7 +284,7 @@ export default function AddHabitForm({ onAddHabit }: AddHabitFormProps) {
             )}
 
             <Button type="submit" className="w-full">
-              <Plus className="ml-2 h-4 w-4" />
+              <Plus className="mr-2 h-4 w-4" />
               إضافة العادة
             </Button>
           </form>

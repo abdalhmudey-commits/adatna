@@ -10,7 +10,7 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 210 40% 98%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 212 78% 59%;
+    --primary: 212 78% 59%; /* Approximation of #89B2E8 */
     --primary-foreground: 210 40% 98%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 84% 4.9%;
@@ -25,6 +25,7 @@
     --ring: 212 78% 59%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
