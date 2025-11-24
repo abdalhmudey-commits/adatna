@@ -15,6 +15,10 @@ import SplashScreen from '@/components/splash-screen';
 
 const inter = Inter({ subsets: ['latin']});
 
+// This is required for GitHub Pages deployment. It must match the repository name.
+const basePath = process.env.NODE_ENV === 'production' ? '/adatna' : '';
+
+
 // Since we are using 'use client', we can't export Metadata directly.
 // This is a workaround to still have metadata in the page.
 const AppMetadata: React.FC = () => {
@@ -52,7 +56,9 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-         <link rel="manifest" href="/manifest.json" />
+         <link rel="manifest" href={`${basePath}/manifest.json`} />
+         <link rel="apple-touch-icon" href={`${basePath}/icon-192x192.png`}></link>
+         <meta name="theme-color" content="#18453B" />
          {/* We can't export Metadata, so we manage it via a component */}
       </head>
       <body className={`${inter.className} font-body antialiased`}>
