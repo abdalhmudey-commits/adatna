@@ -13,6 +13,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // This is the crucial fix. It ensures that static assets are served correctly on GitHub Pages.
+  trailingSlash: true,
   /* config options here */
 };
 
