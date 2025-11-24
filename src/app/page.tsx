@@ -9,10 +9,36 @@ import { useToast } from "@/hooks/use-toast";
 import { Smile } from 'lucide-react';
 import { NotificationsContext } from '@/context/notifications-context';
 import { useLanguage } from '@/context/language-context';
+import { Skeleton } from '@/components/ui/skeleton';
 
 type ManagedHabit = Habit & { intervalId?: number };
 
 const HABIT_STORAGE_KEY = 'habitual_habits';
+
+const HomePageSkeleton = () => (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="lg:col-span-1">
+            <div className="p-6 border rounded-lg bg-card">
+                <Skeleton className="h-8 w-1/2 mb-6" />
+                <div className="space-y-6">
+                    <Skeleton className="h-4 w-1/3 mb-2" />
+                    <Skeleton className="h-10 w-full" />
+                    <Skeleton className="h-4 w-1/3 mb-2" />
+                    <Skeleton className="h-20 w-full" />
+                    <Skeleton className="h-10 w-full" />
+                </div>
+            </div>
+        </div>
+        <div className="lg:col-span-2">
+            <Skeleton className="h-8 w-1/3 mb-4" />
+            <div className="space-y-4">
+                <Skeleton className="h-32 w-full" />
+                <Skeleton className="h-32 w-full" />
+            </div>
+        </div>
+    </div>
+);
+
 
 export default function Home() {
   const [habits, setHabits] = useState<ManagedHabit[]>([]);
@@ -21,16 +47,16 @@ export default function Home() {
   const { notificationsEnabled } = useContext(NotificationsContext);
   const { t } = useLanguage();
 
-  const playAudio = (url: string) => {
+  const playAudio = useCallback((url: string) => {
     const audio = new Audio(url);
     audio.play().catch(e => console.error("Error playing audio:", e));
-  };
+  }, []);
 
-  const showNotification = (title: string, body: string) => {
+  const showNotification = useCallback((title: string, body: string) => {
     if ('Notification' in window && Notification.permission === "granted") {
       new Notification(title, { body });
     }
-  };
+  }, []);
 
   const startNotificationInterval = useCallback((habit: Habit): number | undefined => {
     if (!notificationsEnabled) return undefined;
@@ -52,6 +78,8 @@ export default function Home() {
         break;
     }
 
+    if (intervalMs <= 0) return undefined;
+
     const id = window.setInterval(() => {
       if (reminderType === 'audio' && audioBlobUrl) {
         playAudio(audioBlobUrl);
@@ -65,7 +93,7 @@ export default function Home() {
     }, intervalMs);
 
     return id;
-  }, [toast, notificationsEnabled]);
+  }, [toast, notificationsEnabled, playAudio, showNotification]);
 
   const stopNotificationInterval = (intervalId?: number) => {
     if (intervalId) {
@@ -73,32 +101,29 @@ export default function Home() {
     }
   };
   
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  
   // Effect to manage intervals when notificationsEnabled changes
   useEffect(() => {
     if (!isClient) return;
 
-    if (notificationsEnabled) {
-      // Start intervals for all habits
-      setHabits(currentHabits => currentHabits.map(habit => {
-        // Clear any existing interval first
-        stopNotificationInterval(habit.intervalId);
+    setHabits(currentHabits => currentHabits.map(habit => {
+        stopNotificationInterval(habit.intervalId); // Stop any existing interval
+        const newIntervalId = notificationsEnabled ? startNotificationInterval(habit) : undefined;
         return {
           ...habit,
-          intervalId: startNotificationInterval(habit)
+          intervalId: newIntervalId
         };
       }));
-    } else {
-      // Stop all intervals
-      setHabits(currentHabits => currentHabits.map(habit => {
-        stopNotificationInterval(habit.intervalId);
-        return { ...habit, intervalId: undefined };
-      }));
-    }
-     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [notificationsEnabled, isClient, startNotificationInterval]);
+      // We don't want startNotificationInterval in the dependency array as it creates a new function on every render
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [notificationsEnabled, isClient]);
 
   useEffect(() => {
-    setIsClient(true);
+    if (!isClient) return;
+
     if ('Notification' in window && Notification.permission !== "granted" && Notification.permission !== "denied") {
       Notification.requestPermission().then(permission => {
         if (permission === 'granted') {
@@ -113,14 +138,18 @@ export default function Home() {
     if (storedHabitsRaw) {
       try {
         const storedHabits: Habit[] = JSON.parse(storedHabitsRaw);
-        // We defer starting the intervals until the notificationsEnabled effect runs
-        setHabits(storedHabits.map(h => ({...h, intervalId: undefined})));
+        setHabits(storedHabits.map(h => ({
+            ...h,
+            intervalId: notificationsEnabled ? startNotificationInterval(h) : undefined
+        })));
       } catch (error) {
         console.error("Failed to parse habits from localStorage", error);
         localStorage.removeItem(HABIT_STORAGE_KEY);
       }
     }
-  }, [toast]);
+     // We only want to run this once on mount, with the correct initial `notificationsEnabled` state
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isClient, toast]);
 
   useEffect(() => {
     if (isClient) {
@@ -154,7 +183,11 @@ export default function Home() {
   };
 
   if (!isClient) {
-    return null;
+    return (
+        <div className="container mx-auto p-4 md:p-8">
+            <HomePageSkeleton />
+        </div>
+    );
   }
 
   return (
