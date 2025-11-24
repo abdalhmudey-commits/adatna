@@ -1,23 +1,23 @@
 {
-  "id": "/adatna/",
   "name": "التخلص من العادات والافكار وملخصات كتب وتنمية الشخصية",
   "short_name": "هاكر العادات",
   "description": "تطبيق شامل لمساعدتك على التخلص من العادات السيئة، مع ملخصات كتب قيمة لتنمية شخصيتك.",
-  "start_url": "/adatna/",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#18453B",
+  "background_color": "#F0F4F8",
   "theme_color": "#18453B",
-  "scope": "/adatna/",
+  "scope": "/",
+  "id": "/",
   "icons": [
     {
-      "src": "/adatna/icons/icon-192x192.png",
+      "src": "/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/adatna/icons/icon-512x512.png",
+      "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -25,16 +25,18 @@
   ],
   "screenshots": [
     {
-      "src": "/adatna/screenshots/screenshot1.png",
-      "sizes": "1080x2340",
+      "src": "https://picsum.photos/seed/1/1080/1920",
+      "sizes": "1080x1920",
       "type": "image/png",
-      "label": "إدارة العادات"
+      "form_factor": "narrow",
+      "label": "Home Screen"
     },
     {
-      "src": "/adatna/screenshots/screenshot2.png",
-      "sizes": "1080x2340",
+      "src": "https://picsum.photos/seed/2/1080/1920",
+      "sizes": "1080x1920",
       "type": "image/png",
-      "label": "ملخصات الكتب"
+      "form_factor": "narrow",
+      "label": "Summaries Page"
     }
   ]
 }
