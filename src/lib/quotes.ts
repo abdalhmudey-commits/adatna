@@ -105,7 +105,42 @@ export const motivationalQuotes: { [key: string]: { quote: string; author: strin
         { quote: "We may encounter many defeats but we must not be defeated.", author: "Maya Angelou" },
         { quote: "The way to get started is to quit talking and begin doing.", author: "Walt Disney" }
     ],
-    fr: [],
-    tr: [],
-    id: []
+    fr: [
+        { quote: "La plus grande gloire n'est pas de ne jamais tomber, mais de se relever à chaque chute.", author: "Nelson Mandela" },
+        { quote: "La seule façon de faire un excellent travail est d'aimer ce que vous faites.", author: "Steve Jobs" },
+        { quote: "Soyez le changement que vous voulez voir dans le monde.", author: "Gandhi" },
+        { quote: "Le succès n'est pas final, l'échec n'est pas fatal : c'est le courage de continuer qui compte.", author: "Winston Churchill" },
+        { quote: "N'attendez pas l'opportunité. Créez-la.", author: "George Bernard Shaw" },
+        { quote: "L'esprit est tout. Ce que vous pensez, vous le devenez.", author: "Bouddha" },
+        { quote: "Commencez où vous êtes. Utilisez ce que vous avez. Faites ce que vous pouvez.", author: "Arthur Ashe" },
+        { quote: "Les défis sont ce qui rend la vie intéressante et les surmonter est ce qui lui donne un sens.", author: "Joshua J. Marine" },
+        { quote: "Une personne qui n'a jamais commis d'erreur n'a jamais rien essayé de nouveau.", author: "Albert Einstein" },
+        { quote: "Le meilleur moment pour planter un arbre était il y a 20 ans. Le deuxième meilleur moment est maintenant.", author: "Proverbe chinois" }
+    ],
+    tr: [
+        { quote: "Yaşamdaki en büyük zafer hiç düşmemek değil, her düştüğünde yeniden ayağa kalkmaktır.", author: "Nelson Mandela" },
+        { quote: "Harika bir iş yapmanın tek yolu, yaptığınız işi sevmektir.", author: "Steve Jobs" },
+        { quote: "Dünyada görmek istediğin değişim kendin ol.", author: "Gandhi" },
+        { quote: "Başarı nihai değildir, başarısızlık ölümcül değildir: Önemli olan devam etme cesaretidir.", author: "Winston Churchill" },
+        { quote: "Fırsatı beklemeyin. Yaratın.", author: "George Bernard Shaw" },
+        { quote: "Akıl her şeydir. Ne düşünürsen, o olursun.", author: "Buda" },
+        { quote: "Olduğun yerden başla. Sahip olduklarını kullan. Yapabildiğini yap.", author: "Arthur Ashe" },
+        { quote: "Hayatı ilginç kılan zorluklardır ve onların üstesinden gelmek hayata anlam katar.", author: "Joshua J. Marine" },
+        { quote: "Hiç hata yapmamış bir insan, hiç yeni bir şey denememiştir.", author: "Albert Einstein" },
+        { quote: "Bir ağaç dikmek için en iyi zaman 20 yıl önceydi. İkinci en iyi zaman ise şimdi.", author: "Çin Atasözü" }
+    ],
+    id: [
+        { quote: "Kemuliaan terbesar dalam hidup bukan terletak pada tidak pernah jatuh, tetapi pada bangkit setiap kali kita jatuh.", author: "Nelson Mandela" },
+        { quote: "Satu-satunya cara untuk melakukan pekerjaan hebat adalah dengan mencintai apa yang Anda lakukan.", author: "Steve Jobs" },
+        { quote: "Jadilah perubahan yang ingin kamu lihat di dunia.", author: "Gandhi" },
+        { quote: "Kesuksesan bukanlah akhir, kegagalan bukanlah hal yang fatal: Keberanian untuk melanjutkanlah yang terpenting.", author: "Winston Churchill" },
+        { quote: "Jangan menunggu kesempatan. Ciptakanlah.", author: "George Bernard Shaw" },
+        { quote: "Pikiran adalah segalanya. Apa yang Anda pikirkan, itulah jadinya Anda.", author: "Buddha" },
+        { quote: "Mulailah dari tempat Anda berada. Gunakan apa yang Anda miliki. Lakukan apa yang Anda bisa.", author: "Arthur Ashe" },
+        { quote: "Tantangan adalah apa yang membuat hidup menarik, dan mengatasinya adalah apa yang membuat hidup berarti.", author: "Joshua J. Marine" },
+        { quote: "Seseorang yang tidak pernah membuat kesalahan tidak pernah mencoba sesuatu yang baru.", author: "Albert Einstein" },
+        { quote: "Waktu terbaik untuk menanam pohon adalah 20 tahun yang lalu. Waktu terbaik kedua adalah sekarang.", author: "Pepatah Cina" }
+    ]
 };
+
+    

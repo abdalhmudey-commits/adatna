@@ -16,7 +16,7 @@ export const adhkar: { [key: string]: AdhkarCollection } = {
     morning: [
       {
         title: "آية الكرسي",
-        content: "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ mَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ.",
+        content: "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ sِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ mَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ.",
         count: "مرة واحدة",
         virtue: "من قالها حين يصبح أجير من الجن حتى يمسي."
       },
@@ -46,7 +46,7 @@ export const adhkar: { [key: string]: AdhkarCollection } = {
       },
       {
         title: "دعاء العافية",
-        content: "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ. اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ، وَالْفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ.",
+        content: "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي sَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ. اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ، وَالْفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ.",
         count: "ثلاث مرات",
         virtue: "دعاء شامل للعافية في الدين والدنيا."
       },
@@ -325,16 +325,292 @@ export const adhkar: { [key: string]: AdhkarCollection } = {
     ]
   },
   fr: {
-    morning: [],
-    evening: []
+    morning: [
+        {
+            title: "Ayat al-Kursi",
+            content: "Allahu la ilaha illa Huwa, Al-Hayyul-Qayyum...",
+            count: "Une fois",
+            virtue: "Quiconque le dit le matin sera protégé des djinns jusqu'au soir."
+        },
+        {
+            title: "Al-Mu'awwidhat",
+            content: "Qul Huwallahu Ahad... / Qul a'udhu bi Rabbil-falaq... / Qul a'udhu bi Rabbin-nas...",
+            count: "Trois fois",
+            virtue: "Quiconque les dit trois fois le matin et le soir, elles lui suffiront contre tout."
+        },
+        {
+            title: "Prière du Matin",
+            content: "Asbahna wa asbahal-mulku lillah, wal-hamdulillah...",
+            count: "Une fois",
+            virtue: "Une des prières authentiques du matin."
+        },
+        {
+            title: "Sayyid al-Istighfar",
+            content: "Allahumma Anta Rabbi la ilaha illa Anta...",
+            count: "Une fois",
+            virtue: "Quiconque le dit avec certitude le matin et meurt ce jour-là entrera au Paradis."
+        },
+        {
+            title: "Glorification et Louange",
+            content: "Subhanallahi wa bihamdihi: 'adada khalqihi, wa rida nafsihi, wa zinata 'arshihi, wa midada kalimatihi.",
+            count: "Trois fois",
+            virtue: "Cela a une grande vertu et une récompense multipliée."
+        },
+        {
+            title: "Satisfaction",
+            content: "Raditu billahi Rabban, wa bil-Islami dinan, wa bi Muhammadin... Nabiyyan.",
+            count: "Trois fois",
+            virtue: "Allah se fera un devoir de le satisfaire au Jour de la Résurrection."
+        },
+        {
+            title: "Confiance en Allah",
+            content: "Bismillahil-ladhi la yadurru ma'asmihi shay'un fil-ardi wa la fis-sama'i...",
+            count: "Trois fois",
+            virtue: "Rien ne lui nuira de la part d'Allah."
+        },
+        {
+            title: "Subhanallahi wa bihamdihi",
+            content: "Subhanallahi wa bihamdihi.",
+            count: "Cent fois",
+            virtue: "Ses péchés seront pardonnés même s'ils sont comme l'écume de la mer."
+        },
+        {
+            title: "La ilaha illallah wahdahu...",
+            content: "La ilaha illallah wahdahu la sharika lah, lahul-mulku wa lahul-hamd...",
+            count: "Cent fois",
+            virtue: "Il aura une récompense équivalente à celle de libérer dix esclaves, cent bonnes actions lui seront écrites, cent mauvaises actions lui seront effacées, et il aura une protection contre Satan pour ce jour jusqu'au soir."
+        }
+    ],
+    evening: [
+        {
+            title: "Ayat al-Kursi",
+            content: "Allahu la ilaha illa Huwa, Al-Hayyul-Qayyum...",
+            count: "Une fois",
+            virtue: "Quiconque le dit le soir sera protégé des djinns jusqu'au matin."
+        },
+        {
+            title: "Al-Mu'awwidhat",
+            content: "Qul Huwallahu Ahad... / Qul a'udhu bi Rabbil-falaq... / Qul a'udhu bi Rabbin-nas...",
+            count: "Trois fois",
+            virtue: "Quiconque les dit trois fois le matin et le soir, elles lui suffiront contre tout."
+        },
+        {
+            title: "Prière du Soir",
+            content: "Amsayna wa amsal-mulku lillah, wal-hamdulillah...",
+            count: "Une fois",
+            virtue: "Une des prières authentiques du soir."
+        },
+        {
+            title: "Sayyid al-Istighfar",
+            content: "Allahumma Anta Rabbi la ilaha illa Anta...",
+            count: "Une fois",
+            virtue: "Quiconque le dit avec certitude le soir et meurt cette nuit-là entrera au Paradis."
+        },
+        {
+            title: "Protection",
+            content: "A'udhu bikalimatillahit-tammati min sharri ma khalaq.",
+            count: "Trois fois",
+            virtue: "Rien ne lui nuira."
+        },
+        {
+            title: "Subhanallahi wa bihamdihi",
+            content: "Subhanallahi wa bihamdihi.",
+            count: "Cent fois",
+            virtue: "Ses péchés seront pardonnés même s'ils sont comme l'écume de la mer."
+        }
+    ]
   },
   tr: {
-    morning: [],
-    evening: []
+    morning: [
+        {
+            title: "Ayet-el Kürsi",
+            content: "Allahu la ilahe illa Huvel-Hayyul-Kayyum...",
+            count: "Bir defa",
+            virtue: "Kim sabahleyin okursa akşama kadar cinlerden korunur."
+        },
+        {
+            title: "Muavvizat",
+            content: "Kul Hüvallahü Ehad... / Kul e'ûzü bi-Rabbi'l-felak... / Kul e'ûzü bi-Rabbi'n-nâs...",
+            count: "Üç defa",
+            virtue: "Kim sabah ve akşam üç defa okursa her şeye karşı ona yeter."
+        },
+        {
+            title: "Sabah Duası",
+            content: "Asbahna ve asbahal-mülkü lillah, vel-hamdülillah...",
+            count: "Bir defa",
+            virtue: "Sahih sabah dualarından biridir."
+        },
+        {
+            title: "Seyyid-ül İstiğfar",
+            content: "Allahümme Ente Rabbî la ilahe illa Ente...",
+            count: "Bir defa",
+            virtue: "Kim sabahleyin inanarak okur ve o gün ölürse Cennet'e girer."
+        },
+        {
+            title: "Tesbih ve Hamd",
+            content: "Sübhanallahi ve bihamdihi: 'adede halkıhi, ve rızâ nefsihi, ve zinete 'arşihi, ve midâde kelimâtih.",
+            count: "Üç defa",
+            virtue: "Büyük bir fazileti ve kat kat sevabı vardır."
+        },
+        {
+            title: "Rıza Duası",
+            content: "Radîtü billahi Rabben, ve bil-İslami dînen, ve bi Muhammedin... Nebiyyen.",
+            count: "Üç defa",
+            virtue: "Kıyamet Günü Allah'ın onu razı etmesi üzerine bir hak olur."
+        },
+        {
+            title: "Allah'a Tevekkül",
+            content: "Bismillahil-lezi la yedurru me'asmihi şey'ün fil-ardı ve la fis-semâi...",
+            count: "Üç defa",
+            virtue: "Allah'tan ona hiçbir şey zarar vermez."
+        },
+        {
+            title: "Sübhanallahi ve bihamdihi",
+            content: "Sübhanallahi ve bihamdihi.",
+            count: "Yüz defa",
+            virtue: "Deniz köpüğü kadar günahı olsa bile affedilir."
+        },
+        {
+            title: "La ilahe illallah vahdehu...",
+            content: "La ilahe illallah vahdehu la şerike leh, lehül-mülkü ve lehül-hamdü...",
+            count: "Yüz defa",
+            virtue: "On köle azat etmiş gibi sevap kazanır, yüz hasene yazılır, yüz günahı silinir ve o gün akşama kadar şeytandan korunur."
+        }
+    ],
+    evening: [
+        {
+            title: "Ayet-el Kürsi",
+            content: "Allahu la ilahe illa Huvel-Hayyul-Kayyum...",
+            count: "Bir defa",
+            virtue: "Kim akşam okursa sabaha kadar cinlerden korunur."
+        },
+        {
+            title: "Muavvizat",
+            content: "Kul Hüvallahü Ehad... / Kul e'ûzü bi-Rabbi'l-felak... / Kul e'ûzü bi-Rabbi'n-nâs...",
+            count: "Üç defa",
+            virtue: "Kim sabah ve akşam üç defa okursa her şeye karşı ona yeter."
+        },
+        {
+            title: "Akşam Duası",
+            content: "Emseynâ ve emsel-mülkü lillâh, vel-hamdülillâh...",
+            count: "Bir defa",
+            virtue: "Sahih akşam dualarından biridir."
+        },
+        {
+            title: "Seyyid-ül İstiğfar",
+            content: "Allahümme Ente Rabbî la ilahe illa Ente...",
+            count: "Bir defa",
+            virtue: "Kim akşamleyin inanarak okur ve o gece ölürse Cennet'e girer."
+        },
+        {
+            title: "Korunma Duası",
+            content: "E'ûzü bi-kelimâtillâhi't-tâmmâti min şerri mâ halak.",
+            count: "Üç defa",
+            virtue: "Ona hiçbir şey zarar vermez."
+        },
+        {
+            title: "Sübhanallahi ve bihamdihi",
+            content: "Sübhanallahi ve bihamdihi.",
+            count: "Yüz defa",
+            virtue: "Deniz köpüğü kadar günahı olsa bile affedilir."
+        }
+    ]
   },
   id: {
-    morning: [],
-    evening: []
+    morning: [
+        {
+            title: "Ayat Kursi",
+            content: "Allahu la ilaha illa Huwa, Al-Hayyul-Qayyum...",
+            count: "Sekali",
+            virtue: "Barangsiapa membacanya di pagi hari akan dilindungi dari jin hingga sore hari."
+        },
+        {
+            title: "Al-Mu'awwidhat",
+            content: "Qul Huwallahu Ahad... / Qul a'udhu bi Rabbil-falaq... / Qul a'udhu bi Rabbin-nas...",
+            count: "Tiga kali",
+            virtue: "Barangsiapa membacanya tiga kali di pagi dan sore hari, maka itu akan mencukupinya dari segala sesuatu."
+        },
+        {
+            title: "Doa Pagi",
+            content: "Asbahna wa asbahal-mulku lillah, wal-hamdulillah...",
+            count: "Sekali",
+            virtue: "Salah satu doa pagi yang otentik."
+        },
+        {
+            title: "Sayyidul Istighfar",
+            content: "Allahumma Anta Rabbi la ilaha illa Anta...",
+            count: "Sekali",
+            virtue: "Barangsiapa membacanya dengan yakin di pagi hari dan meninggal pada hari itu, maka ia akan masuk surga."
+        },
+        {
+            title: "Tasbih dan Tahmid",
+            content: "Subhanallahi wa bihamdihi: 'adada khalqihi, wa rida nafsihi, wa zinata 'arshihi, wa midada kalimatihi.",
+            count: "Tiga kali",
+            virtue: "Memiliki keutamaan besar dan pahala yang berlipat ganda."
+        },
+        {
+            title: "Doa Keridhaan",
+            content: "Raditu billahi Rabban, wa bil-Islami dinan, wa bi Muhammadin... Nabiyyan.",
+            count: "Tiga kali",
+            virtue: "Allah akan meridhoinya pada Hari Kiamat."
+        },
+        {
+            title: "Tawakal kepada Allah",
+            content: "Bismillahil-ladhi la yadurru ma'asmihi shay'un fil-ardi wa la fis-sama'i...",
+            count: "Tiga kali",
+            virtue: "Tidak ada sesuatu pun yang akan membahayakannya dari Allah."
+        },
+        {
+            title: "Subhanallahi wa bihamdihi",
+            content: "Subhanallahi wa bihamdihi.",
+            count: "Seratus kali",
+            virtue: "Dosa-dosanya akan diampuni meskipun sebanyak buih di lautan."
+        },
+        {
+            title: "La ilaha illallah wahdahu...",
+            content: "La ilaha illallah wahdahu la syarika lah, lahul-mulku wa lahul-hamd...",
+            count: "Seratus kali",
+            virtue: "Pahalanya setara dengan memerdekakan sepuluh budak, seratus kebaikan akan ditulis untuknya, seratus keburukan akan dihapus darinya, dan dia akan mendapat perlindungan dari setan pada hari itu hingga sore."
+        }
+    ],
+    evening: [
+        {
+            title: "Ayat Kursi",
+            content: "Allahu la ilaha illa Huwa, Al-Hayyul-Qayyum...",
+            count: "Sekali",
+            virtue: "Barangsiapa membacanya di sore hari akan dilindungi dari jin hingga pagi hari."
+        },
+        {
+            title: "Al-Mu'awwidhat",
+            content: "Qul Huwallahu Ahad... / Qul a'udhu bi Rabbil-falaq... / Qul a'udhu bi Rabbin-nas...",
+            count: "Tiga kali",
+            virtue: "Barangsiapa membacanya tiga kali di pagi dan sore hari, maka itu akan mencukupinya dari segala sesuatu."
+        },
+        {
+            title: "Doa Sore",
+            content: "Amsayna wa amsal-mulku lillah, wal-hamdulillah...",
+            count: "Sekali",
+            virtue: "Salah satu doa sore yang otentik."
+        },
+        {
+            title: "Sayyidul Istighfar",
+            content: "Allahumma Anta Rabbi la ilaha illa Anta...",
+            count: "Sekali",
+            virtue: "Barangsiapa membacanya dengan yakin di sore hari dan meninggal pada malam itu, maka ia akan masuk surga."
+        },
+        {
+            title: "Doa Perlindungan",
+            content: "A'udhu bikalimatillahit-tammati min syarri ma khalaq.",
+            count: "Tiga kali",
+            virtue: "Tidak ada sesuatu pun yang akan membahayakannya."
+        },
+        {
+            title: "Subhanallahi wa bihamdihi",
+            content: "Subhanallahi wa bihamdihi.",
+            count: "Seratus kali",
+            virtue: "Dosa-dosanya akan diampuni meskipun sebanyak buih di lautan."
+        }
+    ]
   }
 };
 
