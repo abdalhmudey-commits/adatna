@@ -77,11 +77,6 @@ const DhikrCard = ({ title, content, count, virtue }: { title: string, content: 
 export default function AdhkarPage() {
   return (
     <div className="container mx-auto p-4 md:p-8">
-      <header className="text-center mb-8">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">الأذكار</h1>
-        <p className="text-lg text-muted-foreground mt-2">حصن المسلم اليومي من أذكار الصباح والمساء</p>
-      </header>
-
       <Tabs defaultValue="morning" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="morning">
