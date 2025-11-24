@@ -41,7 +41,7 @@ export const translations = {
       habitAddedSuccess: 'تم إضافة العادة بنجاح!',
       habitAddedDescription: (name: string) => `سيتم تذكيرك بشأن "${name}".`,
       habitDeletedSuccess: 'تم حذف العادة',
-      habitDeletedDescription: 'تم إيقاف جميع التذكيرات لهذه العادة.',
+      habitDeletedDescription: 'تم إيقاف جميع التذكيرات لهذه العada.',
       micError: 'خطأ في الوصول إلى الميكروفون',
       micErrorDescription: 'يرجى التأكد من منح الإذن لاستخدام الميكروفون.',
       audioRecordingRequired: 'يرجى تسجيل تنبيه صوتي أولاً.',
@@ -71,6 +71,11 @@ export const translations = {
     adhkar: {
       morning: 'أذكار الصباح',
       evening: 'أذكار المساء',
+    },
+    summaries: {
+      title: 'ملخصات كتب',
+      description: 'مجموعة من الملخصات العميقة لكتب غيرت حياة الملايين في مجال تطوير الذات والعادات.',
+      author: 'المؤلف',
     }
   },
   en: {
@@ -142,6 +147,11 @@ export const translations = {
     adhkar: {
       morning: 'Morning Adhkar',
       evening: 'Evening Adhkar',
+    },
+    summaries: {
+      title: 'Book Summaries',
+      description: 'A collection of in-depth summaries of books that have changed the lives of millions in self-development and habits.',
+      author: 'Author',
     }
   },
 };
