@@ -1,19 +1,19 @@
 {
-  "name": "Habit Hacker - هاكر العادات",
-  "short_name": "Adatna",
+  "name": "Habit Hacker | هاكر العادات",
+  "short_name": "Habit Hacker",
   "description": "An app to help you track and break bad habits.",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#18453B",
+  "background_color": "#ffffff",
   "theme_color": "#18453B",
   "icons": [
     {
-      "src": "https://picsum.photos/seed/1/192/192",
+      "src": "icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://picsum.photos/seed/2/512/512",
+      "src": "icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
