@@ -1,7 +1,7 @@
 {
-  "name": "Habit Hacker",
-  "short_name": "Habit Hacker",
-  "description": "تطبيق لمساعدتك على التخلص من العادات السيئة",
+  "name": "Habit Hacker - هاكر العادات",
+  "short_name": "Adatna",
+  "description": "An app to help you track and break bad habits.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#18453B",
