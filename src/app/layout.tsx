@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import AppHeader from '@/components/layout/app-header';
 import BottomNav from '@/components/layout/bottom-nav';
+import { NotificationsProvider } from '@/context/notifications-context';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -27,12 +28,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen flex-col">
-            <AppHeader />
-            <main className="flex-1 pb-20">{children}</main>
-            <BottomNav />
-          </div>
-          <Toaster />
+          <NotificationsProvider>
+            <div className="relative flex min-h-screen flex-col">
+              <AppHeader />
+              <main className="flex-1 pb-20">{children}</main>
+              <BottomNav />
+            </div>
+            <Toaster />
+          </NotificationsProvider>
         </ThemeProvider>
       </body>
     </html>

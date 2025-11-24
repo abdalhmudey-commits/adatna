@@ -1,21 +1,26 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Button } from '@/components/ui/button';
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Bell, Languages, Moon, Sun } from 'lucide-react';
+import { Bell, BellOff, Languages, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useToast } from '@/hooks/use-toast';
+import { NotificationsContext } from '@/context/notifications-context';
+
 
 export default function AppHeader() {
   const { setTheme, theme } = useTheme();
   const { toast } = useToast();
   const [currentLang, setCurrentLang] = useState('ar');
+  const { notificationsEnabled, setNotificationsEnabled } = useContext(NotificationsContext);
 
   const handleLanguageChange = (lang: 'ar' | 'en') => {
     if (typeof window !== 'undefined') {
@@ -31,17 +36,18 @@ export default function AppHeader() {
     }
   };
 
-  const handleNotificationsClick = () => {
+  const handleNotificationsToggle = (enabled: boolean) => {
+    setNotificationsEnabled(enabled);
     toast({
-        title: "الإشعارات",
-        description: "لا توجد إشعارات جديدة في الوقت الحالي.",
+        title: enabled ? "تم تفعيل الإشعارات" : "تم إيقاف الإشعارات",
+        description: enabled ? "ستتلقى تذكيرات لعاداتك." : "لن تتلقى أي تذكيرات.",
     });
   }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
-        <div className="mr-auto flex items-center space-x-2 rtl:ml-auto rtl:mr-0 rtl:space-x-reverse">
+        <div className="mr-auto flex items-center space-x-4 rtl:ml-auto rtl:mr-0 rtl:space-x-reverse">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -59,10 +65,17 @@ export default function AppHeader() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Button variant="ghost" size="icon" onClick={handleNotificationsClick}>
-            <Bell className="h-[1.2rem] w-[1.2rem]" />
-            <span className="sr-only">الإشعارات</span>
-          </Button>
+          <div className="flex items-center space-x-2 rtl:space-x-reverse">
+            <Switch
+              id="notifications-switch"
+              checked={notificationsEnabled}
+              onCheckedChange={handleNotificationsToggle}
+              aria-label="Toggle notifications"
+            />
+            <Label htmlFor="notifications-switch" className="flex items-center cursor-pointer">
+              {notificationsEnabled ? <Bell className="h-[1.2rem] w-[1.2rem]" /> : <BellOff className="h-[1.2rem] w-[1.2rem] text-muted-foreground" />}
+            </Label>
+          </div>
 
           <Button
             variant="ghost"

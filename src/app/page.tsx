@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useContext } from 'react';
 import { type Habit } from '@/lib/types';
 import AddHabitForm from '@/components/habit/add-habit-form';
 import HabitList from '@/components/habit/habit-list';
 import { useToast } from "@/hooks/use-toast";
 import { Smile } from 'lucide-react';
+import { NotificationsContext } from '@/context/notifications-context';
 
 type ManagedHabit = Habit & { intervalId?: number };
 
@@ -15,6 +16,7 @@ export default function Home() {
   const [habits, setHabits] = useState<ManagedHabit[]>([]);
   const [isClient, setIsClient] = useState(false);
   const { toast } = useToast();
+  const { notificationsEnabled } = useContext(NotificationsContext);
 
   const playAudio = (url: string) => {
     const audio = new Audio(url);
@@ -27,7 +29,9 @@ export default function Home() {
     }
   };
 
-  const startNotificationInterval = useCallback((habit: Habit): number => {
+  const startNotificationInterval = useCallback((habit: Habit): number | undefined => {
+    if (!notificationsEnabled) return undefined;
+
     const { interval, intervalUnit, name, message, reminderType, audioBlobUrl } = habit;
     let intervalMs = 0;
     switch (intervalUnit) {
@@ -58,7 +62,37 @@ export default function Home() {
     }, intervalMs);
 
     return id;
-  }, [toast]);
+  }, [toast, notificationsEnabled]);
+
+  const stopNotificationInterval = (intervalId?: number) => {
+    if (intervalId) {
+      clearInterval(intervalId);
+    }
+  };
+  
+  // Effect to manage intervals when notificationsEnabled changes
+  useEffect(() => {
+    if (!isClient) return;
+
+    if (notificationsEnabled) {
+      // Start intervals for all habits
+      setHabits(currentHabits => currentHabits.map(habit => {
+        // Clear any existing interval first
+        stopNotificationInterval(habit.intervalId);
+        return {
+          ...habit,
+          intervalId: startNotificationInterval(habit)
+        };
+      }));
+    } else {
+      // Stop all intervals
+      setHabits(currentHabits => currentHabits.map(habit => {
+        stopNotificationInterval(habit.intervalId);
+        return { ...habit, intervalId: undefined };
+      }));
+    }
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [notificationsEnabled, isClient, startNotificationInterval]);
 
   useEffect(() => {
     setIsClient(true);
@@ -76,17 +110,14 @@ export default function Home() {
     if (storedHabitsRaw) {
       try {
         const storedHabits: Habit[] = JSON.parse(storedHabitsRaw);
-        const managedHabits = storedHabits.map(habit => ({
-          ...habit,
-          intervalId: startNotificationInterval(habit)
-        }));
-        setHabits(managedHabits);
+        // We defer starting the intervals until the notificationsEnabled effect runs
+        setHabits(storedHabits.map(h => ({...h, intervalId: undefined})));
       } catch (error) {
         console.error("Failed to parse habits from localStorage", error);
         localStorage.removeItem(HABIT_STORAGE_KEY);
       }
     }
-  }, [startNotificationInterval, toast]);
+  }, [toast]);
 
   useEffect(() => {
     if (isClient) {
