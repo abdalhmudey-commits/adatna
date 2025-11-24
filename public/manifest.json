@@ -2,8 +2,8 @@
   "name": "التخلص من العادات والافكار وملخصات كتب وتنمية الشخصية",
   "short_name": "هاكر العادات",
   "description": "تطبيق شامل لمساعدتك على التخلص من العادات السيئة، مع ملخصات كتب قيمة لتنمية شخصيتك.",
-  "start_url": "/adatna/",
   "id": "/adatna/",
+  "start_url": "/adatna/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#18453B",
@@ -11,44 +11,8 @@
   "scope": "/adatna/",
   "icons": [
     {
-      "src": "/adatna/icons/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/adatna/icons/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/adatna/icons/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/adatna/icons/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/adatna/icons/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
       "src": "/adatna/icons/icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/adatna/icons/icon-384x384.png",
-      "sizes": "384x384",
       "type": "image/png",
       "purpose": "any maskable"
     },
@@ -61,34 +25,18 @@
   ],
   "screenshots": [
     {
-      "src": "https://picsum.photos/seed/1/1080/1920",
-      "sizes": "1080x1920",
+      "src": "https://picsum.photos/seed/screenshot1/540/720",
+      "sizes": "540x720",
       "type": "image/jpeg",
       "form_factor": "narrow",
-      "label": "شاشة العادات"
+      "label": "Homescreen"
     },
     {
-      "src": "https://picsum.photos/seed/2/1080/1920",
-      "sizes": "1080x1920",
+      "src": "https://picsum.photos/seed/screenshot2/540/720",
+      "sizes": "540x720",
       "type": "image/jpeg",
       "form_factor": "narrow",
-      "label": "شاشة الأذكار"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "إضافة عادة جديدة",
-      "short_name": "إضافة عادة",
-      "description": "الانتقال مباشرة لإضافة عادة جديدة",
-      "url": "/adatna/",
-      "icons": [{ "src": "/adatna/icons/icon-96x96.png", "sizes": "96x96" }]
-    },
-    {
-      "name": "عرض الأذكار",
-      "short_name": "الأذكار",
-      "description": "الانتقال إلى صفحة الأذكار",
-      "url": "/adatna/adhkar",
-      "icons": [{ "src": "/adatna/icons/icon-96x96.png", "sizes": "96x96" }]
+      "label": "Book Summaries"
     }
   ]
 }
