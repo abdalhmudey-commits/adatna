@@ -2,8 +2,6 @@
 
 import { useState, useContext } from 'react';
 import { Button } from '@/components/ui/button';
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -36,11 +34,12 @@ export default function AppHeader() {
     }
   };
 
-  const handleNotificationsToggle = (enabled: boolean) => {
-    setNotificationsEnabled(enabled);
+  const handleNotificationsToggle = () => {
+    const newStatus = !notificationsEnabled;
+    setNotificationsEnabled(newStatus);
     toast({
-        title: enabled ? "تم تفعيل الإشعارات" : "تم إيقاف الإشعارات",
-        description: enabled ? "ستتلقى تذكيرات لعاداتك." : "لن تتلقى أي تذكيرات.",
+        title: newStatus ? "تم تفعيل الإشعارات" : "تم إيقاف الإشعارات",
+        description: newStatus ? "ستتلقى تذكيرات لعاداتك." : "لن تتلقى أي تذكيرات.",
     });
   }
 
@@ -64,18 +63,10 @@ export default function AppHeader() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-
-          <div className="flex items-center space-x-2 rtl:space-x-reverse">
-            <Switch
-              id="notifications-switch"
-              checked={notificationsEnabled}
-              onCheckedChange={handleNotificationsToggle}
-              aria-label="Toggle notifications"
-            />
-            <Label htmlFor="notifications-switch" className="flex items-center cursor-pointer">
-              {notificationsEnabled ? <Bell className="h-[1.2rem] w-[1.2rem]" /> : <BellOff className="h-[1.2rem] w-[1.2rem] text-muted-foreground" />}
-            </Label>
-          </div>
+          
+          <Button variant="ghost" size="icon" onClick={handleNotificationsToggle} aria-label="Toggle notifications">
+            {notificationsEnabled ? <Bell className="h-[1.2rem] w-[1.2rem]" /> : <BellOff className="h-[1.2rem] w-[1.2rem] text-muted-foreground" />}
+          </Button>
 
           <Button
             variant="ghost"
