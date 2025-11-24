@@ -4,14 +4,17 @@
 import { useState, useEffect } from 'react';
 import { motivationalQuotes } from '@/lib/quotes';
 import { Quote } from 'lucide-react';
+import { useLanguage } from '@/context/language-context';
 
 const SplashScreen = () => {
+  const { locale } = useLanguage();
   const [quote, setQuote] = useState<{ quote: string; author: string } | null>(null);
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Select a random quote
-    const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+    // Select a random quote based on the current locale
+    const quotesForLocale = motivationalQuotes[locale]?.length > 0 ? motivationalQuotes[locale] : motivationalQuotes.en;
+    const randomQuote = quotesForLocale[Math.floor(Math.random() * quotesForLocale.length)];
     setQuote(randomQuote);
 
     // Hide splash screen after a delay
@@ -20,7 +23,7 @@ const SplashScreen = () => {
     }, 3000); // 3 seconds
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [locale]);
 
   if (!isVisible) {
     return null;
