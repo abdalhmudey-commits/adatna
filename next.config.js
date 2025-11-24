@@ -10,6 +10,11 @@ const withPWA = require('next-pwa')({
   register: true,
   skipWaiting: true,
   disable: !isProd,
+  pwa: {
+    dest: "public",
+    display: "standalone",
+    start_url: ".",
+  }
 });
 
 const nextConfig = {
