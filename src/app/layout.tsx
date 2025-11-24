@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-         <link rel="manifest" href="/adatna/manifest.json" />
+         <link rel="manifest" href="/adatna/manifest.webmanifest" />
          <meta name="theme-color" content="#18453B" />
          <link rel="apple-touch-icon" href="/adatna/icons/icon-192x192.png"></link>
          <meta name="apple-mobile-web-app-capable" content="yes" />

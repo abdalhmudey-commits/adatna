@@ -52,6 +52,7 @@ const AdhkarSkeleton = () => (
     </div>
 );
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function AdhkarPage() {
   const { locale, t } = useLanguage();
@@ -62,10 +63,10 @@ export default function AdhkarPage() {
     const fetchAdhkar = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`/data/adhkar/${locale}.json`);
+        const response = await fetch(`${basePath}/data/adhkar/${locale}.json`);
         if (!response.ok) {
             // Fallback to English if the locale-specific file is not found
-            const fallbackResponse = await fetch(`/data/adhkar/en.json`);
+            const fallbackResponse = await fetch(`${basePath}/data/adhkar/en.json`);
             const data = await fallbackResponse.json();
             setAdhkar(data);
         } else {
@@ -76,7 +77,7 @@ export default function AdhkarPage() {
         console.error("Failed to load adhkar data, falling back to English", error);
         // Fallback to English on any error
         try {
-            const fallbackResponse = await fetch(`/data/adhkar/en.json`);
+            const fallbackResponse = await fetch(`${basePath}/data/adhkar/en.json`);
             const data = await fallbackResponse.json();
             setAdhkar(data);
         } catch (fallbackError) {

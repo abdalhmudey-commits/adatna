@@ -30,6 +30,7 @@ const SummariesSkeleton = () => (
     </div>
 );
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function SummariesPage() {
   const { t, locale } = useLanguage();
@@ -40,9 +41,9 @@ export default function SummariesPage() {
     const fetchSummaries = async () => {
         setLoading(true);
       try {
-        const response = await fetch(`/data/summaries/${locale}.json`);
+        const response = await fetch(`${basePath}/data/summaries/${locale}.json`);
         if (!response.ok) {
-            const fallbackResponse = await fetch(`/data/summaries/en.json`);
+            const fallbackResponse = await fetch(`${basePath}/data/summaries/en.json`);
             const data = await fallbackResponse.json();
             setSummaries(data);
         } else {
@@ -52,7 +53,7 @@ export default function SummariesPage() {
       } catch (error) {
         console.error("Failed to load summaries, falling back to English", error);
         try {
-            const fallbackResponse = await fetch(`/data/summaries/en.json`);
+            const fallbackResponse = await fetch(`${basePath}/data/summaries/en.json`);
             const data = await fallbackResponse.json();
             setSummaries(data);
         } catch (fallbackError) {
