@@ -47,7 +47,7 @@ export const motivationalQuotes: { [key: string]: { quote: string; author: strin
         { quote: "نحن نتاج عاداتنا. إذن، التميز ليس فعلًا، بل عادة.", author: "أرسطو" },
         { quote: "إذا لم تكن على استعداد للمخاطرة بما هو غير عادي، فسيتعين عليك أن ترضى بما هو عادي.", author: "جيم رون" },
         { quote: "الثقة بالنفس هي أول سر للنجاح.", author: "رالف والدو إمرسون" },
-        { quote: "الألم مؤقت. قد يستمر لدقيقة، أو ساعة، أو يوم، أو سنة، لكنه في النهاية سيزول وسيحل محله شيء آخر. أما إذا استسلمت، فسيدوم إلى الأبد.", author: "لانس أرمسترونغ" },
+        { quote: "الألم مؤقت. قد يستمر لدقيقة، أو ساعة، أو يوم، أو سنة، لكنه في النهاDة سيزول وسيحل محله شيء آخر. أما إذا استسلمت، فسيدوم إلى الأبد.", author: "لانس أرمسترونغ" },
         { quote: "النجاح هو مجموع الجهود الصغيرة التي تتكرر يومًا بعد يوم.", author: "روبرت كولير" },
         { quote: "أعظم متعة في الحياة هي فعل ما يقول الناس إنك لا تستطيع فعله.", author: "والتر باجهوت" },
         { quote: "لتكن أفعالك هي الضوضاء الوحيدة.", author: "مجهول" }
@@ -71,7 +71,6 @@ export const motivationalQuotes: { [key: string]: { quote: string; author: strin
         { quote: "Whoever is happy will make others happy too.", author: "Anne Frank" },
         { quote: "Do not go where the path may lead, go instead where there is no path and leave a trail.", author: "Ralph Waldo Emerson" },
         { quote: "You will face many defeats in life, but never let yourself be defeated.", author: "Maya Angelou" },
-        { quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.", author: "Nelson Mandela" },
         { quote: "In the end, it's not the years in your life that count. It's the life in your years.", author: "Abraham Lincoln" },
         { quote: "Never let the fear of striking out keep you from playing the game.", author: "Babe Ruth" },
         { quote: "Life is either a daring adventure or nothing at all.", author: "Helen Keller" },
@@ -82,7 +81,6 @@ export const motivationalQuotes: { [key: string]: { quote: string; author: strin
         { quote: "In this life we cannot do great things. We can only do small things with great love.", author: "Mother Teresa" },
         { quote: "Only a life lived for others is a life worthwhile.", author: "Albert Einstein" },
         { quote: "The purpose of our lives is to be happy.", author: "Dalai Lama" },
-        { quote: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
         { quote: "You only live once, but if you do it right, once is enough.", author: "Mae West" },
         { quote: "Live in the sunshine, swim the sea, drink the wild air.", author: "Ralph Waldo Emerson" },
         { quote: "Go confidently in the direction of your dreams! Live the life you've imagined.", author: "Henry David Thoreau" },
@@ -101,8 +99,7 @@ export const motivationalQuotes: { [key: string]: { quote: string; author: strin
         { quote: "Keep your eyes on the stars, and your feet on the ground.", author: "Theodore Roosevelt" },
         { quote: "The only limit to our realization of tomorrow will be our doubts of today.", author: "Franklin D. Roosevelt" },
         { quote: "What you get by achieving your goals is not as important as what you become by achieving your goals.", author: "Zig Ziglar" },
-        { quote: "We may encounter many defeats but we must not be defeated.", author: "Maya Angelou" },
-        { quote: "The way to get started is to quit talking and begin doing.", author: "Walt Disney" }
+        { quote: "We may encounter many defeats but we must not be defeated.", author: "Maya Angelou" }
     ],
     fr: [
         { quote: "La plus grande gloire n'est pas de ne jamais tomber, mais de se relever à chaque chute.", author: "Nelson Mandela" },

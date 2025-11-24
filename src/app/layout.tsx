@@ -45,7 +45,7 @@ export default function RootLayout({
     // Simulate app loading
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Same duration as splash screen
+    }, 3000); // Set splash screen duration to 3 seconds
     return () => clearTimeout(timer);
   }, []);
 
@@ -78,3 +78,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+    
