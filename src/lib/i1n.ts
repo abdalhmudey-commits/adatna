@@ -41,7 +41,7 @@ export const translations = {
       habitAddedSuccess: 'تم إضافة العادة بنجاح!',
       habitAddedDescription: (name: string) => `سيتم تذكيرك بشأن "${name}".`,
       habitDeletedSuccess: 'تم حذف العادة',
-      habitDeletedDescription: 'تم إيقاف جميع التذكيرات لهذه العادة.',
+      habitDeletedDescription: 'تم إيقاف جميع التذكيرات لهذه العada.',
       micError: 'خطأ في الوصول إلى الميكروفون',
       micErrorDescription: 'يرجى التأكد من منح الإذن لاستخدام الميكروفون.',
       audioRecordingRequired: 'يرجى تسجيل تنبيه صوتي أولاً.',
@@ -393,3 +393,5 @@ export const translations = {
     }
   },
 };
+
+    
