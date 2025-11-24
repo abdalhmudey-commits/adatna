@@ -16,7 +16,7 @@ import SplashScreen from '@/components/splash-screen';
 const inter = Inter({ subsets: ['latin']});
 
 // This is required for GitHub Pages deployment. It must match the repository name.
-const basePath = process.env.NODE_ENV === 'production' ? '/adatna' : '';
+const basePath = '/adatna';
 
 
 // Since we are using 'use client', we can't export Metadata directly.
