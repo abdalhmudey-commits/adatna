@@ -4,7 +4,7 @@ const nextConfig = {
   output: 'export',
   // Required for GitHub Pages deployment
   basePath: '/adatna',
-  assetPrefix: '/adatna',
+  assetPrefix: '/adatna/',
   images: {
     unoptimized: true,
   },

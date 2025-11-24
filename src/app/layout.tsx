@@ -14,6 +14,7 @@ import { useState, useEffect } from 'react';
 import SplashScreen from '@/components/splash-screen';
 
 const inter = Inter({ subsets: ['latin']});
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 // Since we are using 'use client', we can't export Metadata directly.
 // This is a workaround to still have metadata in the page.
@@ -52,9 +53,9 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-         <link rel="manifest" href="/manifest.json" />
+         <link rel="manifest" href={`${basePath}/manifest.json`} />
          <meta name="theme-color" content="#18453B" />
-         <link rel="apple-touch-icon" href="/icon-192x192.png"></link>
+         <link rel="apple-touch-icon" href={`${basePath}/icons/icon-192x192.png`}></link>
          <meta name="apple-mobile-web-app-capable" content="yes" />
          <meta name="mobile-web-app-capable" content="yes" />
          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
