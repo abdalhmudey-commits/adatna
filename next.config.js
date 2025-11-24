@@ -6,7 +6,7 @@ const nextConfig = {
   output: 'export',
   // assetPrefix is used to configure the CDN path for public assets.
   // This is required for GitHub Pages deployment.
-  assetPrefix: isProd ? '/adatna/' : '',
+  assetPrefix: isProd ? '/adatna' : '',
   // basePath is used to configure the base path for the application.
   // This is required for GitHub Pages deployment.
   basePath: isProd ? '/adatna' : '',
@@ -15,7 +15,6 @@ const nextConfig = {
   },
   // This is the crucial fix. It ensures that static assets are served correctly on GitHub Pages.
   trailingSlash: true,
-  /* config options here */
 };
 
 module.exports = nextConfig;

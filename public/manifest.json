@@ -1,7 +1,13 @@
 {
-  "name": "هاكر العادات",
-  "short_name": "عادات",
-  "description": "تطبيق لمساعدتك على التخلص من العادات السيئة وبناء عادات إيجابية",
+  "name": "Habit Hacker",
+  "short_name": "Habit Hacker",
+  "description": "An app to help you quit bad habits.",
+  "start_url": "/adatna/",
+  "id": "/adatna/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F0F4F8",
+  "theme_color": "#18453B",
   "icons": [
     {
       "src": "/adatna/icons/icon-192x192.png",
@@ -15,11 +21,5 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ],
-  "theme_color": "#18453B",
-  "background_color": "#F3FAF8",
-  "start_url": "/adatna/",
-  "display": "standalone",
-  "orientation": "portrait-primary",
-  "id": "/adatna/"
+  ]
 }
