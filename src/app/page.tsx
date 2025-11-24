@@ -124,7 +124,7 @@ export default function Home() {
   }
 
   return (
-    <main className="container mx-auto p-4 md:p-8">
+    <div className="container mx-auto p-4 md:p-8">
       <header className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">هاكر العادات</h1>
         <p className="text-lg text-muted-foreground mt-2">تحكم في عاداتك، تحكم في حياتك.</p>
@@ -147,6 +147,6 @@ export default function Home() {
             )}
         </div>
       </div>
-    </main>
+    </div>
   );
 }
