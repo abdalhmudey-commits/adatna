@@ -11,14 +11,12 @@ const withPWA = require('next-pwa')({
   skipWaiting: true,
   disable: !isProd,
   buildExcludes: ["app-build-manifest.json"],
+  // The manifest configuration is now directly inside the PWA config
+  // next-pwa will use this to generate the manifest.webmanifest file
   pwa: {
     dest: "public",
     display: "standalone",
     start_url: ".",
-    // next-pwa will automatically handle basePath and publicExcludes.
-    // It generates the manifest and service worker correctly based on the nextConfig basePath.
-    // We just need to define the icons correctly.
-    // The src paths are relative to the public directory.
     icons: [
         {
           src: '/icons/icon-72x72.png',
@@ -85,4 +83,5 @@ const nextConfig = {
   }
 };
 
+// Wrap the Next.js config with the PWA config
 module.exports = withPWA(nextConfig);
