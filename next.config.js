@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const repo = 'adatna'; // اسم المستودع على GitHub
+const repo = 'adatna';
 const assetPrefix = `/${repo}/`;
 const basePath = `/${repo}`;
 
