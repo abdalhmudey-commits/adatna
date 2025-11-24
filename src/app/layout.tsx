@@ -13,7 +13,7 @@ import { LanguageProvider } from '@/context/language-context';
 import { useState, useEffect } from 'react';
 import SplashScreen from '@/components/splash-screen';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const inter = Inter({ subsets: ['latin']});
 
 // Since we are using 'use client', we can't export Metadata directly.
 // This is a workaround to still have metadata in the page.
@@ -54,7 +54,7 @@ export default function RootLayout({
       <head>
          {/* We can't export Metadata, so we manage it via a component */}
       </head>
-      <body className={`${inter.variable} font-body antialiased`}>
+      <body className={`${inter.className} font-body antialiased`}>
         <AppMetadata />
         <ThemeProvider
           attribute="class"

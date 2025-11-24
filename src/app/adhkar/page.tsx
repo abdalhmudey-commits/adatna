@@ -26,7 +26,7 @@ const DhikrCard = ({ title, content, count, virtue }: { title: string, content: 
 
 export default function AdhkarPage() {
   const { locale, t } = useLanguage();
-  const currentAdhkar = adhkar[locale] || adhkar.ar;
+  const currentAdhkar = adhkar[locale] || adhkar.en;
 
   return (
     <div className="container mx-auto p-4 md:p-8">

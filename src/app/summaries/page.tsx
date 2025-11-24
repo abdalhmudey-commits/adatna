@@ -279,12 +279,15 @@ const bookSummaries = {
       ]
     }
   ],
+  fr: [],
+  tr: [],
+  id: []
 };
 
 
 export default function SummariesPage() {
   const { t, locale } = useLanguage();
-  const currentSummaries = bookSummaries[locale] || bookSummaries.ar;
+  const currentSummaries = bookSummaries[locale]?.length ? bookSummaries[locale] : bookSummaries.en;
 
   return (
     <div className="container mx-auto p-4 md:p-8">

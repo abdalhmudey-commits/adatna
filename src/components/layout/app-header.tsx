@@ -25,9 +25,17 @@ export default function AppHeader() {
 
   const handleLanguageChange = (lang: Locale) => {
     setLocale(lang);
+    let langName = '';
+    switch(lang) {
+      case 'ar': langName = 'العربية'; break;
+      case 'en': langName = 'English'; break;
+      case 'fr': langName = 'Français'; break;
+      case 'tr': langName = 'Türkçe'; break;
+      case 'id': langName = 'Bahasa Indonesia'; break;
+    }
     toast({
       title: t('header.langChangedTitle'),
-      description: lang === 'ar' ? t('header.langChangedToArabic') : t('header.langChangedToEnglish'),
+      description: t('header.langChangedTo', langName),
     });
   };
 
@@ -57,6 +65,15 @@ export default function AppHeader() {
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => handleLanguageChange('en')} disabled={locale === 'en'}>
                 {t('header.english')}
+              </DropdownMenuItem>
+               <DropdownMenuItem onClick={() => handleLanguageChange('fr')} disabled={locale === 'fr'}>
+                {t('header.french')}
+              </DropdownMenuItem>
+               <DropdownMenuItem onClick={() => handleLanguageChange('tr')} disabled={locale === 'tr'}>
+                {t('header.turkish')}
+              </DropdownMenuItem>
+               <DropdownMenuItem onClick={() => handleLanguageChange('id')} disabled={locale === 'id'}>
+                {t('header.indonesian')}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
