@@ -57,7 +57,7 @@ export default function RootLayout({
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
          <link rel="manifest" href={`${basePath}/manifest.json`} />
-         <link rel="apple-touch-icon" href={`${basePath}/icon-192x192.png`}></link>
+         <link rel="apple-touch-icon" href="https://picsum.photos/seed/1/192/192"></link>
          <meta name="theme-color" content="#18453B" />
          {/* We can't export Metadata, so we manage it via a component */}
       </head>
