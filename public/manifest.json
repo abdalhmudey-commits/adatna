@@ -1,13 +1,12 @@
 {
   "theme_color": "#18453B",
-  "background_color": "#000000",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "id": "/",
   "name": "هاكر العادات",
   "short_name": "عادات",
-  "description": "تطبيق لمساعدتك على التخلص من العادات السيئة وبناء عادات إيجابية.",
+  "description": "تطبيق لتتبع العادات السيئة والتخلص منها",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
@@ -15,18 +14,19 @@
       "type": "image/png"
     },
     {
+      "src": "/icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
       "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "إضافة عادة جديدة",
-      "short_name": "إضافة عادة",
-      "description": "فتح صفحة إضافة عادة جديدة مباشرة",
-      "url": "/?action=add-habit",
-      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
     }
   ]
 }
