@@ -10,10 +10,65 @@ const withPWA = require('next-pwa')({
   register: true,
   skipWaiting: true,
   disable: !isProd,
+  buildExcludes: ["app-build-manifest.json"],
   pwa: {
     dest: "public",
     display: "standalone",
     start_url: ".",
+    // next-pwa will automatically handle basePath and publicExcludes.
+    // It generates the manifest and service worker correctly based on the nextConfig basePath.
+    // We just need to define the icons correctly.
+    // The src paths are relative to the public directory.
+    icons: [
+        {
+          src: '/icons/icon-72x72.png',
+          sizes: '72x72',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: '/icons/icon-96x96.png',
+          sizes: '96x96',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: '/icons/icon-128x128.png',
+          sizes: '128x128',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: '/icons/icon-144x144.png',
+          sizes: '144x144',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: '/icons/icon-152x152.png',
+          sizes: '152x152',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: '/icons/icon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+        {
+          src: '/icons/icon-384x384.png',
+          sizes: '384x384',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: '/icons/icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+      ],
   }
 });
 
