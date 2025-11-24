@@ -1,12 +1,12 @@
 {
-  "id": "/adatna/",
-  "name": "Habit Hacker",
+  "name": "Habit Hacker - هاكر العادات",
   "short_name": "Habit Hacker",
-  "description": "An app to help you track and break bad habits.",
+  "description": "تطبيق لمساعدتك على تتبع العادات السيئة والتخلص منها. An app to help you track and break bad habits.",
+  "id": "/adatna/",
   "start_url": ".",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#18453B",
+  "background_color": "#F0FFF4",
   "theme_color": "#18453B",
   "icons": [
     {
@@ -20,6 +20,22 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://picsum.photos/seed/1/1080/1920",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Habit Tracking"
+    },
+    {
+      "src": "https://picsum.photos/seed/2/1080/1920",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Adhkar Reminders"
     }
   ]
 }
